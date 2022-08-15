@@ -16,68 +16,6 @@ class _HomeState extends State<Home> {
 
         backgroundColor: Colors.white,
 
-        drawer: Drawer(
-          backgroundColor: Colors.white,
-          child: Center(
-            child: SingleChildScrollView(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment
-                    .spaceBetween, // centraliza para ocupar so o tamanho necessario
-                mainAxisSize: MainAxisSize.min,
-
-                children: [
-
-
-                  ElevatedButton(onPressed: (){}, child: Text('Guia Do Usuario'),style: ButtonStyle(
-                    shape: MaterialStateProperty.resolveWith((states){
-                      return RoundedRectangleBorder( borderRadius: BorderRadius.circular(10), );
-                    }), // Muda as Bordas
-                    fixedSize: MaterialStateProperty.resolveWith<Size?>((states){
-                      return Size(300, 60);
-                    }
-
-                    ), //tamanho
-                    backgroundColor: MaterialStateProperty.resolveWith<Color?>((states){
-                      if(states.contains(MaterialState.pressed)){
-                        return Colors.grey;
-                      }
-                    }) //cor de fundo
-                  ), ),
-                  SizedBox(height: 20,),
-
-                  ElevatedButton(onPressed: (){}, child: Text('Como Consultar o Pergamun?'),style: ButtonStyle(
-                      shape: MaterialStateProperty.resolveWith((states){
-                        return RoundedRectangleBorder( borderRadius: BorderRadius.circular(10), );
-                      }), // Muda as Bordas
-                      fixedSize: MaterialStateProperty.resolveWith<Size?>((states){
-                        return Size(300, 60);
-                      }
-
-                      ), //tamanho
-                      backgroundColor: MaterialStateProperty.resolveWith<Color?>((states){
-                        if(states.contains(MaterialState.pressed)){
-                          return Colors.grey;
-                        }
-                      }) //cor de fundo
-                  ), ),
-                  SizedBox(height: 20,),
-
-                  ElevatedButton(onPressed: (){}, child: Text('Como Localizar Os livros nas estantes'),style: ButtonStyle(
-                      shape: MaterialStateProperty.resolveWith((states){
-                        return RoundedRectangleBorder( borderRadius: BorderRadius.circular(10), );
-                      }), // Muda as Bordas
-                      fixedSize: MaterialStateProperty.resolveWith<Size?>((states){
-                        return Size(300, 60);
-                      }
-
-                      ), //tamanho
-                      backgroundColor: MaterialStateProperty.resolveWith<Color?>((states){
-                        if(states.contains(MaterialState.pressed)){
-                          return Colors.grey;
-                        }
-                      }) //cor de fundo
-                  ), ),
-                  SizedBox(height: 20,),
 
                   ElevatedButton(onPressed: (){}, child: Text('Tutoriais'),style: ButtonStyle(
                       shape: MaterialStateProperty.resolveWith((states){
@@ -85,77 +23,145 @@ class _HomeState extends State<Home> {
                       }), // Muda as Bordas
                       fixedSize: MaterialStateProperty.resolveWith<Size?>((states){
                         return Size(300, 60);
-                      }
+         endDrawer: Drawer(
+           backgroundColor: Colors.white,
+           child: Center(
+             child: SingleChildScrollView(
+               child: Column(
+                 mainAxisAlignment: MainAxisAlignment
+                     .spaceBetween, // centraliza para ocupar so o tamanho necessario
+                 mainAxisSize: MainAxisSize.min,
 
-                      ), //tamanho
-                      backgroundColor: MaterialStateProperty.resolveWith<Color?>((states){
-                        if(states.contains(MaterialState.pressed)){
-                          return Colors.grey;
-                        }
-                      }) //cor de fundo
-                  ), ),
-                  SizedBox(height: 20,),
-
-                  ElevatedButton(onPressed: (){}, child: Text('Como Fazer uma reserva de um livro?'),style: ButtonStyle(
-                      shape: MaterialStateProperty.resolveWith((states){
-                        return RoundedRectangleBorder( borderRadius: BorderRadius.circular(10), );
-                      }), // Muda as Bordas
-                      fixedSize: MaterialStateProperty.resolveWith<Size?>((states){
-                        return Size(300, 60);
-                      }
-
-                      ), //tamanho
-                      backgroundColor: MaterialStateProperty.resolveWith<Color?>((states){
-                        if(states.contains(MaterialState.pressed)){
-                          return Colors.grey;
-                        }
-                      }) //cor de fundo
-                  ), ),
-                  SizedBox(height: 20,),
-
-                  ElevatedButton(onPressed: (){}, child: Text('Carta de doação'),style: ButtonStyle(
-                      shape: MaterialStateProperty.resolveWith((states){
-                        return RoundedRectangleBorder( borderRadius: BorderRadius.circular(10), );
-                      }), // Muda as Bordas
-                      fixedSize: MaterialStateProperty.resolveWith<Size?>((states){
-                        return Size(300, 60);
-                      }
-
-                      ), //tamanho
-                      backgroundColor: MaterialStateProperty.resolveWith<Color?>((states){
-                        if(states.contains(MaterialState.pressed)){
-                          return Colors.grey;
-                        }
-                      }) //cor de fundo
-                  ), ),
-                  SizedBox(height: 20,),
-
-                  ElevatedButton(onPressed: (){}, child: Text('Setores'),style: ButtonStyle(
-                      shape: MaterialStateProperty.resolveWith((states){
-                        return RoundedRectangleBorder( borderRadius: BorderRadius.circular(10), );
-                      }), // Muda as Bordas
-                      fixedSize: MaterialStateProperty.resolveWith<Size?>((states){
-                        return Size(300, 60);
-                      }
-
-                      ), //tamanho
-                      backgroundColor: MaterialStateProperty.resolveWith<Color?>((states){
-                        if(states.contains(MaterialState.pressed)){
-                          return Colors.grey;
-                        }
-                      }) //cor de fundo
-                  ), ),
-                  SizedBox(height: 20,),
+                 children: [
 
 
+                   ElevatedButton(onPressed: (){}, child: Text('Guia Do Usuario'),style: ButtonStyle(
+                       shape: MaterialStateProperty.resolveWith((states){
+                       }), // Muda as Bordas
+                       fixedSize: MaterialStateProperty.resolveWith<Size?>((states){
+                         return Size(300, 60);
+                       }
+
+                       ), //tamanho
+                       backgroundColor: MaterialStateProperty.resolveWith<Color?>((states){
+                         if(states.contains(MaterialState.pressed)){
+                           return Colors.grey;
+                         }
+                       }) //cor de fundo
+                   ), ),
+                   SizedBox(height: 20,),
+
+                   ElevatedButton(onPressed: (){}, child: Text('Como Consultar o Pergamun?'),style: ButtonStyle(
+                       shape: MaterialStateProperty.resolveWith((states){
+                         return RoundedRectangleBorder( borderRadius: BorderRadius.circular(10), );
+                       }), // Muda as Bordas
+                       fixedSize: MaterialStateProperty.resolveWith<Size?>((states){
+                         return Size(300, 60);
+                       }
+
+                       ), //tamanho
+                       backgroundColor: MaterialStateProperty.resolveWith<Color?>((states){
+                         if(states.contains(MaterialState.pressed)){
+                           return Colors.grey;
+                         }
+                       }) //cor de fundo
+                   ), ),
+                   SizedBox(height: 20,),
+
+                   ElevatedButton(onPressed: (){}, child: Text('Como Localizar Os livros nas estantes'),style: ButtonStyle(
+                       shape: MaterialStateProperty.resolveWith((states){
+                         return RoundedRectangleBorder( borderRadius: BorderRadius.circular(10), );
+                       }), // Muda as Bordas
+                       fixedSize: MaterialStateProperty.resolveWith<Size?>((states){
+                         return Size(300, 60);
+                       }
+
+                       ), //tamanho
+                       backgroundColor: MaterialStateProperty.resolveWith<Color?>((states){
+                         if(states.contains(MaterialState.pressed)){
+                           return Colors.grey;
+                         }
+                       }) //cor de fundo
+                   ), ),
+                   SizedBox(height: 20,),
+
+                   ElevatedButton(onPressed: (){}, child: Text('Tutoriais'),style: ButtonStyle(
+                       shape: MaterialStateProperty.resolveWith((states){
+                         return RoundedRectangleBorder( borderRadius: BorderRadius.circular(10), );
+                       }), // Muda as Bordas
+                       fixedSize: MaterialStateProperty.resolveWith<Size?>((states){
+                         return Size(300, 60);
+                       }
+
+                       ), //tamanho
+                       backgroundColor: MaterialStateProperty.resolveWith<Color?>((states){
+                         if(states.contains(MaterialState.pressed)){
+                           return Colors.grey;
+                         }
+                       }) //cor de fundo
+                   ), ),
+                   SizedBox(height: 20,),
+
+                   ElevatedButton(onPressed: (){}, child: Text('Como Fazer uma reserva de um livro?'),style: ButtonStyle(
+                       shape: MaterialStateProperty.resolveWith((states){
+                         return RoundedRectangleBorder( borderRadius: BorderRadius.circular(10), );
+                       }), // Muda as Bordas
+                       fixedSize: MaterialStateProperty.resolveWith<Size?>((states){
+                         return Size(300, 60);
+                       }
+
+                       ), //tamanho
+                       backgroundColor: MaterialStateProperty.resolveWith<Color?>((states){
+                         if(states.contains(MaterialState.pressed)){
+                           return Colors.grey;
+                         }
+                       }) //cor de fundo
+                   ), ),
+                   SizedBox(height: 20,),
+
+                   ElevatedButton(onPressed: (){}, child: Text('Carta de doação'),style: ButtonStyle(
+                       shape: MaterialStateProperty.resolveWith((states){
+                         return RoundedRectangleBorder( borderRadius: BorderRadius.circular(10), );
+                       }), // Muda as Bordas
+                       fixedSize: MaterialStateProperty.resolveWith<Size?>((states){
+                         return Size(300, 60);
+                       }
+
+                       ), //tamanho
+                       backgroundColor: MaterialStateProperty.resolveWith<Color?>((states){
+                         if(states.contains(MaterialState.pressed)){
+                           return Colors.grey;
+                         }
+                       }) //cor de fundo
+                   ), ),
+                   SizedBox(height: 20,),
+
+                   ElevatedButton(onPressed: (){}, child: Text('Setores'),style: ButtonStyle(
+                       shape: MaterialStateProperty.resolveWith((states){
+                         return RoundedRectangleBorder( borderRadius: BorderRadius.circular(10), );
+                       }), // Muda as Bordas
+                       fixedSize: MaterialStateProperty.resolveWith<Size?>((states){
+                         return Size(300, 60);
+                       }
+
+                       ), //tamanho
+                       backgroundColor: MaterialStateProperty.resolveWith<Color?>((states){
+                         if(states.contains(MaterialState.pressed)){
+                           return Colors.grey;
+                         }
+                       }) //cor de fundo
+                   ), ),
+                   SizedBox(height: 20,),
 
 
 
-                ],
-              ),
-            ),
-          ),
-        ), // Menu Hambuguer
+
+
+                 ],
+               ),
+             ),
+           ),
+         ), // Menu Hambuguer
         appBar: AppBar(
           backgroundColor: Colors.blue,
         ),
