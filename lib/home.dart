@@ -16,13 +16,6 @@ class _HomeState extends State<Home> {
 
         backgroundColor: Colors.white,
 
-
-                  ElevatedButton(onPressed: (){}, child: Text('Tutoriais'),style: ButtonStyle(
-                      shape: MaterialStateProperty.resolveWith((states){
-                        return RoundedRectangleBorder( borderRadius: BorderRadius.circular(10), );
-                      }), // Muda as Bordas
-                      fixedSize: MaterialStateProperty.resolveWith<Size?>((states){
-                        return Size(300, 60);
          endDrawer: Drawer(
            backgroundColor: Colors.white,
            child: Center(
@@ -37,6 +30,7 @@ class _HomeState extends State<Home> {
 
                    ElevatedButton(onPressed: (){}, child: Text('Guia Do Usuario'),style: ButtonStyle(
                        shape: MaterialStateProperty.resolveWith((states){
+                         return RoundedRectangleBorder( borderRadius: BorderRadius.circular(10), );
                        }), // Muda as Bordas
                        fixedSize: MaterialStateProperty.resolveWith<Size?>((states){
                          return Size(300, 60);
