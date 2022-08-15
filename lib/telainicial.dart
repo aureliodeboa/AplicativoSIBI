@@ -15,6 +15,7 @@ class _telainicialState extends State<telainicial> {
         child: Container(
           child: Center(
             child: Text('TELA INICIAL'),
+            //teste da branch dev
           ),
         ),
       ),
