@@ -16,6 +16,7 @@ class _telainicialState extends State<telainicial> {
         Center( child:  Column(
           children: [
             Text('GET AB'),
+            //oi
           ],
         ), ),
     ),),);
