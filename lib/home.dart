@@ -176,7 +176,6 @@ class _HomeState extends State<Home> {
             currentIndex: _opcaoselecionada,
             onTap: (opcao){
             setState(() {
-            print('clicou $opcao');
             _opcaoselecionada=opcao;
           });
             },
