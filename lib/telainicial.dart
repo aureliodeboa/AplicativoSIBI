@@ -10,15 +10,14 @@ class telainicial extends StatefulWidget {
 class _telainicialState extends State<telainicial> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body:  SingleChildScrollView(
-        child: Container( child:
-        Center( child:  Column(
-          children: [
-            Text('GET AB'),
-            //oi
-          ],
-        ), ),
-    ),),);
+    return Container(
+      child: SingleChildScrollView(
+        child: Container(
+          child: Center(
+            child: Text('TELA INICIAL'),
+          ),
+        ),
+      ),
+    );
   }
 }

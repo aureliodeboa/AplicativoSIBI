@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:sibi/telabiblioteca.dart';
+import 'package:sibi/teladepesquisa.dart';
+import 'package:sibi/telainicial.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -9,7 +12,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-
+ int _opcaoselecionada=1;
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -155,15 +158,28 @@ class _HomeState extends State<Home> {
                ),
              ),
            ),
-         ), // Menu Hambuguer
+         )  , // Menu Hambuguer
         appBar: AppBar(
           backgroundColor: Colors.blue,
         ),
-        body: SingleChildScrollView(
-          child: Container(),
+        body: IndexedStack(
+          index: _opcaoselecionada,
+          children: <Widget>[
+            teladepesquisa(),
+            telainicial(),
+            telabiblioteca(),
+
+          ],
         ),
         bottomNavigationBar:
         BottomNavigationBar(  selectedFontSize: 0, iconSize: 35, backgroundColor: Colors.blue[400],
+            currentIndex: _opcaoselecionada,
+            onTap: (opcao){
+            setState(() {
+            print('clicou $opcao');
+            _opcaoselecionada=opcao;
+          });
+            },
             items: [
               BottomNavigationBarItem(icon: Icon(
                       color: Colors.white,
