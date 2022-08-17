@@ -6,6 +6,6 @@ import 'splash.dart';
 void main() {
   runApp(
       MaterialApp(
-        home: Home(),
+        home: Splash(),
   ));
 }
