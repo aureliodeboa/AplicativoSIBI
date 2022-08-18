@@ -31,7 +31,7 @@ class _HomeState extends State<Home> {
                  children: [
 
 
-                   ElevatedButton(onPressed: (){}, child: Text('Guia Do Usuario'),style: ButtonStyle(
+                   ElevatedButton(onPressed: (){}, child: Row(children: [ Icon(Icons.person_outline), Text(' Guia Do Usuario',),],),style:ButtonStyle(
                        shape: MaterialStateProperty.resolveWith((states){
                          return RoundedRectangleBorder( borderRadius: BorderRadius.circular(10), );
                        }), // Muda as Bordas
@@ -48,7 +48,7 @@ class _HomeState extends State<Home> {
                    ), ),
                    SizedBox(height: 20,),
 
-                   ElevatedButton(onPressed: (){}, child: Text('Como Consultar o Pergamun?'),style: ButtonStyle(
+                   ElevatedButton(onPressed: (){}, child: Row(children: [Icon(Icons.search_outlined) ,Text(' Como Consultar o Pergamun?')],),style: ButtonStyle(
                        shape: MaterialStateProperty.resolveWith((states){
                          return RoundedRectangleBorder( borderRadius: BorderRadius.circular(10), );
                        }), // Muda as Bordas
@@ -65,7 +65,7 @@ class _HomeState extends State<Home> {
                    ), ),
                    SizedBox(height: 20,),
 
-                   ElevatedButton(onPressed: (){}, child: Text('Como Localizar Os livros nas estantes'),style: ButtonStyle(
+                   ElevatedButton(onPressed: (){}, child: Row(children: [ Icon(Icons.collections_bookmark_outlined),Text(' Como Localizar Os livros nas estantes'),],) ,style: ButtonStyle(
                        shape: MaterialStateProperty.resolveWith((states){
                          return RoundedRectangleBorder( borderRadius: BorderRadius.circular(10), );
                        }), // Muda as Bordas
@@ -82,7 +82,7 @@ class _HomeState extends State<Home> {
                    ), ),
                    SizedBox(height: 20,),
 
-                   ElevatedButton(onPressed: (){}, child: Text('Tutoriais'),style: ButtonStyle(
+                   ElevatedButton(onPressed: (){}, child: Row(children: [ Icon(Icons.subscriptions),Text(' Tutoriais')]),style: ButtonStyle(
                        shape: MaterialStateProperty.resolveWith((states){
                          return RoundedRectangleBorder( borderRadius: BorderRadius.circular(10), );
                        }), // Muda as Bordas
@@ -99,7 +99,7 @@ class _HomeState extends State<Home> {
                    ), ),
                    SizedBox(height: 20,),
 
-                   ElevatedButton(onPressed: (){}, child: Text('Como Fazer uma reserva de um livro?'),style: ButtonStyle(
+                   ElevatedButton(onPressed: (){}, child: Row(children: [Icon(Icons.touch_app_outlined),Text(' Como Fazer uma reserva de um livro?')],),style: ButtonStyle(
                        shape: MaterialStateProperty.resolveWith((states){
                          return RoundedRectangleBorder( borderRadius: BorderRadius.circular(10), );
                        }), // Muda as Bordas
@@ -116,7 +116,7 @@ class _HomeState extends State<Home> {
                    ), ),
                    SizedBox(height: 20,),
 
-                   ElevatedButton(onPressed: (){}, child: Text('Carta de doação'),style: ButtonStyle(
+                   ElevatedButton(onPressed: (){}, child:Row(children: [Icon(Icons.drafts), Text(' Carta de doação')]),style: ButtonStyle(
                        shape: MaterialStateProperty.resolveWith((states){
                          return RoundedRectangleBorder( borderRadius: BorderRadius.circular(10), );
                        }), // Muda as Bordas
@@ -133,7 +133,7 @@ class _HomeState extends State<Home> {
                    ), ),
                    SizedBox(height: 20,),
 
-                   ElevatedButton(onPressed: (){}, child: Text('Setores'),style: ButtonStyle(
+                   ElevatedButton(onPressed: (){}, child: Row(children: [Icon(Icons.domain_add_outlined),Text(' Setores')],),style: ButtonStyle(
                        shape: MaterialStateProperty.resolveWith((states){
                          return RoundedRectangleBorder( borderRadius: BorderRadius.circular(10), );
                        }), // Muda as Bordas
