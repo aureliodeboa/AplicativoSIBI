@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sibi/telabiblioteca.dart';
 import 'package:sibi/teladelinks.dart';
-import 'package:sibi/teladepesquisa.dart';
 import 'package:sibi/telainicial.dart';
 
 class Home extends StatefulWidget {
@@ -202,17 +201,6 @@ class _HomeState extends State<Home> {
 
 
 
-        /*bottomNavigationBar: NavigationBar(
-        height: 45,
-        backgroundColor: Colors.blue[400],
-        destinations: [
-
-          NavigationDestination(icon: Icon( color: Colors.white,Icons.search_outlined),selectedIcon:Icon(color: Colors.white,Icons.search) , label: ''),
-          NavigationDestination(icon: Icon(color: Colors.white,Icons.home_outlined),selectedIcon:Icon(color: Colors.white,Icons.home) , label: ''),
-          NavigationDestination(icon: Icon(color: Colors.white,Icons.location_on_outlined),selectedIcon:Icon(color: Colors.white,Icons.location_on) ,label:''),
-
-        ],
-      ),*/
 
       );
 
