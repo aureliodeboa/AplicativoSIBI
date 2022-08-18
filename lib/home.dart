@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sibi/telabiblioteca.dart';
+import 'package:sibi/teladelinks.dart';
 import 'package:sibi/teladepesquisa.dart';
 import 'package:sibi/telainicial.dart';
 
@@ -24,8 +25,7 @@ class _HomeState extends State<Home> {
            child: Center(
              child: SingleChildScrollView(
                child: Column(
-                 mainAxisAlignment: MainAxisAlignment
-                     .spaceBetween, // centraliza para ocupar so o tamanho necessario
+                 mainAxisAlignment: MainAxisAlignment.spaceBetween, // centraliza para ocupar so o tamanho necessario
                  mainAxisSize: MainAxisSize.min,
 
                  children: [
@@ -165,7 +165,7 @@ class _HomeState extends State<Home> {
         body: IndexedStack(
           index: _opcaoselecionada,
           children: <Widget>[
-            teladepesquisa(),
+            teladelinks(),
             telainicial(),
             telabiblioteca(),
 
@@ -182,7 +182,7 @@ class _HomeState extends State<Home> {
             items: [
               BottomNavigationBarItem(icon: Icon(
                       color: Colors.white,
-                      Icons.search_outlined),
+                      Icons.check_box_outlined),
                   label: ''),
 
                BottomNavigationBarItem(icon: Icon(
