@@ -14,11 +14,6 @@ class _telaguiausuarioState extends State<telaguiausuario> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue[400],
-        centerTitle: AppBarTheme.centerTlite(
-          Text(
-            'GUIA DO USUÁRIO',
-          ),
-        ),
       ),
       body: SingleChildScrollView(
         child: Center(

@@ -16,28 +16,6 @@ class _HomeState extends State<Home> {
   int _opcaoselecionada = 1;
   @override
   Widget build(BuildContext context) {
-<<<<<<< Updated upstream
-    return  Scaffold(
-
-        backgroundColor: Colors.white,
-
-        endDrawer: menulateral(), // Menu Hambuguer
-        appBar: AppBar(
-          backgroundColor: Colors.blue,
-        ),
-        body: IndexedStack(
-          index: _opcaoselecionada,
-          children: <Widget>[
-            teladelinks(),
-            telainicial(),
-            telabiblioteca(),
-
-          ],
-        ),
-        bottomNavigationBar: BottomNavigationBar(  selectedFontSize: 0, iconSize: 35, backgroundColor: Colors.blue[400],
-            currentIndex: _opcaoselecionada,
-            onTap: (opcao){
-=======
     return Scaffold(
       backgroundColor: Colors.white,
 
@@ -59,7 +37,6 @@ class _HomeState extends State<Home> {
           backgroundColor: Colors.blue[400],
           currentIndex: _opcaoselecionada,
           onTap: (opcao) {
->>>>>>> Stashed changes
             setState(() {
               _opcaoselecionada = opcao;
             });
