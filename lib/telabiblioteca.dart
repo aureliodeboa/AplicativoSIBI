@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:sibi/serradacapivara.dart';
 import 'package:sibi/teladecienciasagrarias.dart';
+import 'package:sibi/telaespacoplural.dart';
 import 'package:sibi/telajuazeiro.dart';
 import 'package:sibi/telapetrolina.dart';
 import 'package:sibi/telasenhordobonfim.dart';
@@ -87,7 +89,10 @@ class _telabibliotecaState extends State<telabiblioteca> {
               height: 20,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => telaespacoplural()));
+              },
               child: Row(
                 children: [
                   Icon(Icons.account_balance),
@@ -210,7 +215,10 @@ class _telabibliotecaState extends State<telabiblioteca> {
               height: 20,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => serradacapivara()));
+              },
               child: Row(
                 children: [
                   Icon(Icons.account_balance),
