@@ -13,7 +13,6 @@ class _telasenhordobonfimState extends State<telasenhordobonfim> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(backgroundColor: Colors.blue[400]),
-      endDrawer: menulateral(),
       body: Column(
         children: [
           Text('Biblioteca Campus Senhor Do Bonfim',

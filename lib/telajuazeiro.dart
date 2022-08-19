@@ -12,7 +12,6 @@ class _telajuzeiroState extends State<telajuzeiro> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(backgroundColor: Colors.blue[400]),
-      endDrawer: menulateral(),
       body: Column(
         children: [
           Text('Biblioteca Campus Juazeiro',textAlign: TextAlign.center,style: TextStyle(color: Colors.amber, fontSize: 30,)),

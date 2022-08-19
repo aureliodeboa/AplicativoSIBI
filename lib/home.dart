@@ -20,7 +20,7 @@ class _HomeState extends State<Home> {
 
         backgroundColor: Colors.white,
 
-         endDrawer: menulateral(), // Menu Hambuguer
+        endDrawer: menulateral(), // Menu Hambuguer
         appBar: AppBar(
           backgroundColor: Colors.blue,
         ),
@@ -33,8 +33,7 @@ class _HomeState extends State<Home> {
 
           ],
         ),
-        bottomNavigationBar:
-        BottomNavigationBar(  selectedFontSize: 0, iconSize: 35, backgroundColor: Colors.blue[400],
+        bottomNavigationBar: BottomNavigationBar(  selectedFontSize: 0, iconSize: 35, backgroundColor: Colors.blue[400],
             currentIndex: _opcaoselecionada,
             onTap: (opcao){
             setState(() {
