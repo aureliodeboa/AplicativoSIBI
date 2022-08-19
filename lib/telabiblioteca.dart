@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:sibi/telajuazeiro.dart';
+import 'package:sibi/telapetrolina.dart';
+
 
 class telabiblioteca extends StatefulWidget {
   const telabiblioteca({Key? key}) : super(key: key);
@@ -16,7 +19,7 @@ class _telabibliotecaState extends State<telabiblioteca> {
         child:  Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            ElevatedButton(onPressed: (){}, child: Row(children: [ Icon(Icons.account_balance), Text(' Petrolina',),],),
+            ElevatedButton(onPressed: (){  Navigator.of(context).push( MaterialPageRoute(builder: (context)=> telapetrolina()));}, child: Row(children: [ Icon(Icons.account_balance), Text(' Petrolina',),],),
               style:ButtonStyle(
                 shape: MaterialStateProperty.resolveWith((states){
                   return RoundedRectangleBorder( borderRadius: BorderRadius.circular(10), );
@@ -33,7 +36,9 @@ class _telabibliotecaState extends State<telabiblioteca> {
                 }) //cor de fundo
             ), ),
             SizedBox(height: 20,),
-            ElevatedButton(onPressed: (){}, child: Row(children: [ Icon(Icons.account_balance), Text(' Juazeiro',),],),style:ButtonStyle(
+            ElevatedButton(onPressed: (){
+              Navigator.of(context).push( MaterialPageRoute(builder: (context)=> telajuzeiro()));
+            }, child: Row(children: [ Icon(Icons.account_balance), Text(' Juazeiro',),],),style:ButtonStyle(
                 shape: MaterialStateProperty.resolveWith((states){
                   return RoundedRectangleBorder( borderRadius: BorderRadius.circular(10), );
                 }), // Muda as Bordas
