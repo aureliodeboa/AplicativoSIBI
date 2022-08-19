@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sibi/menulateral.dart';
 import 'package:sibi/telabiblioteca.dart';
 
 class telaguiausuario extends StatefulWidget {
@@ -10,6 +11,33 @@ class telaguiausuario extends StatefulWidget {
 class _telaguiausuarioState extends State<telaguiausuario> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blue[400],
+        centerTitle: AppBarTheme.centerTlite(
+          Text(
+            'GUIA DO USUÁRIO',
+          ),
+        ),
+      ),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: <Widget>[
+              Text(
+                'APRESENTAÇÃO',
+                style: TextStyle(
+                  fontSize: 25,
+                  foreground: Paint()
+                    ..style = PaintingStyle.stroke
+                    ..strokeWidth = 1
+                    ..color = Colors.blue[400]!,
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
