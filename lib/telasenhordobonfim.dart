@@ -26,10 +26,10 @@ class _telasenhordobonfimState extends State<telasenhordobonfim> {
             child: Image.asset('imagem/campussenhordobonfim.png'),
           ),
           Text(
-              'Responsável: Renato Marques Alves (Bibliotecário - Coordenador da Biblioteca de Juazeiro)'
-              ' Endereço: Avenida Antonio Carlos Magalhães, 510, Santo AntônioJuazeiro-BA, '
-              'CEP: 48902-300 Telefone: (74) 21027656 '
-              ' E-mail: biblioteca.juazeiro@univasf.edu.br',
+              'Responsável: Fábio Silva Santiago (Bibliotecário - Biblioteca de Senhor do Bonfim)'
+              ' Endereço: Rua Tomaz Guimarães, s/n, Condomínio Aeroporto Senhor do Bonfim-BA, '
+              'CEP: 48902-300 Telefone: (74) 3221-4811 '
+              ' E-mail: biblioteca.sbf@univasf.edu.br',
               style: TextStyle(fontSize: 15)),
         ],
       ),
