@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:sibi/telajuazeiro.dart';
-import 'package:sibi/telapetrolina.dart';
-import 'package:sibi/telasenhordobonfim.dart';
+import 'package:sibi/bibliotecas/pauloafonso.dart';
+import 'package:sibi/bibliotecas/salgueiro.dart';
+import 'package:sibi/bibliotecas/serradacapivara.dart';
+import 'package:sibi/bibliotecas/teladecienciasagrarias.dart';
+import 'package:sibi/bibliotecas/telaespacoplural.dart';
+import 'package:sibi/bibliotecas/telajuazeiro.dart';
+import 'package:sibi/bibliotecas/telapetrolina.dart';
+import 'package:sibi/bibliotecas/telasenhordobonfim.dart';
 
 class telabiblioteca extends StatefulWidget {
   const telabiblioteca({Key? key}) : super(key: key);
@@ -86,7 +91,10 @@ class _telabibliotecaState extends State<telabiblioteca> {
               height: 20,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => telaespacoplural()));
+              },
               child: Row(
                 children: [
                   Icon(Icons.account_balance),
@@ -149,7 +157,10 @@ class _telabibliotecaState extends State<telabiblioteca> {
               height: 20,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => pauloafonso()));
+              },
               child: Row(
                 children: [
                   Icon(Icons.account_balance),
@@ -179,7 +190,8 @@ class _telabibliotecaState extends State<telabiblioteca> {
               height: 20,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () { Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => salgueiro()));},
               child: Row(
                 children: [
                   Icon(Icons.account_balance),
@@ -209,7 +221,10 @@ class _telabibliotecaState extends State<telabiblioteca> {
               height: 20,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => serradacapivara()));
+              },
               child: Row(
                 children: [
                   Icon(Icons.account_balance),
@@ -239,7 +254,10 @@ class _telabibliotecaState extends State<telabiblioteca> {
               height: 20,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => teladecienciasagrarias()));
+              },
               child: Row(
                 children: [
                   Icon(Icons.account_balance),

@@ -38,6 +38,7 @@ class _telainicialState extends State<telainicial> {
                           ),
                         ),
                         Text(
+                          textAlign: TextAlign.start,
                           "    O SIBI é o responsável pela coordenação e administração das bibliotecas e pelos recursos informacionais que servem "
                               "de suporte às atividades de ensino, pesquisa e extensão, conforme as políticas, planos e programas da Univasf.\n"
                               "    O SIBI é composto por 07 (sete) bibliotecas, sendo 1 (uma) central e outras 06 (seis) setoriais.\n"
@@ -55,6 +56,7 @@ class _telainicialState extends State<telainicial> {
                             color: Colors.grey[900],
 
                           ),
+
                         ),
                         Text('Apresentação em libras :',style: TextStyle(color: Colors.amber, fontSize: 30,)),
                         YoutubePlayer(controller: YoutubePlayerController(

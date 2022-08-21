@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'menulateral.dart';
 class telapetrolina extends StatefulWidget {
   const telapetrolina({Key? key}) : super(key: key);
 
@@ -12,7 +11,6 @@ class _telapetrolinaState extends State<telapetrolina> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(backgroundColor: Colors.blue[400]),
-      endDrawer: menulateral(),
       body: Column(
         children: [
           Text('Biblioteca Campus Petrolina',textAlign: TextAlign.center,style: TextStyle(color: Colors.amber, fontSize: 30,)),
