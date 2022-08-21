@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:sibi/pauloafonso.dart';
-import 'package:sibi/salgueiro.dart';
-import 'package:sibi/serradacapivara.dart';
-import 'package:sibi/teladecienciasagrarias.dart';
-import 'package:sibi/telaespacoplural.dart';
-import 'package:sibi/telajuazeiro.dart';
-import 'package:sibi/telapetrolina.dart';
-import 'package:sibi/telasenhordobonfim.dart';
+import 'package:sibi/bibliotecas/pauloafonso.dart';
+import 'package:sibi/bibliotecas/salgueiro.dart';
+import 'package:sibi/bibliotecas/serradacapivara.dart';
+import 'package:sibi/bibliotecas/teladecienciasagrarias.dart';
+import 'package:sibi/bibliotecas/telaespacoplural.dart';
+import 'package:sibi/bibliotecas/telajuazeiro.dart';
+import 'package:sibi/bibliotecas/telapetrolina.dart';
+import 'package:sibi/bibliotecas/telasenhordobonfim.dart';
 
 class telabiblioteca extends StatefulWidget {
   const telabiblioteca({Key? key}) : super(key: key);

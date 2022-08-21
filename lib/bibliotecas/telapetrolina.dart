@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'menulateral.dart';
 class telapetrolina extends StatefulWidget {
   const telapetrolina({Key? key}) : super(key: key);
 
