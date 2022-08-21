@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sibi/pauloafonso.dart';
+import 'package:sibi/salgueiro.dart';
 import 'package:sibi/serradacapivara.dart';
 import 'package:sibi/teladecienciasagrarias.dart';
 import 'package:sibi/telaespacoplural.dart';
@@ -155,7 +157,10 @@ class _telabibliotecaState extends State<telabiblioteca> {
               height: 20,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => pauloafonso()));
+              },
               child: Row(
                 children: [
                   Icon(Icons.account_balance),
@@ -185,7 +190,8 @@ class _telabibliotecaState extends State<telabiblioteca> {
               height: 20,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () { Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => salgueiro()));},
               child: Row(
                 children: [
                   Icon(Icons.account_balance),
