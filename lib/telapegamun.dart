@@ -16,14 +16,16 @@ class _telapergamunState extends State<telapergamun> {
       ),
       body: SingleChildScrollView(
         child: Center(
-          heightFactor: 2,
+          //heightFactor: 2,
           child: Column(
 
             children: [
               Container(
-                child: Text('A Cartilha Técnicas de Utilização do Sistema Pergamum '
+                child: Text('\n A Cartilha Técnicas de Utilização do Sistema Pergamum'
                     ' traz a descrição das formas de pesquisa e acesso às obras do catálogo online das bibliotecas '
-                    'e demais serviços disponíveis aos usuários via sistema Pergamum.'),
+                    'e demais serviços disponíveis aos usuários via sistema Pergamum.\n'
+                    '\n Link: https://portais.univasf.edu.br/sibi/cartilha-tecnicas-de-utilizacao-do-sistema-pergamum.pdf'),
+
 
               ),
               Text('Como fazer uma pesquisa básica?'),
@@ -34,6 +36,7 @@ class _telapergamunState extends State<telapergamun> {
                   '4) clique sobre o título da obra desejada; \n'
                   '5) anote o número de chamada para localizar o documento no acervo;\n'
                   '6) Para consultar a quantidade e a disponibilidade de exemplares, clique em “exemplares”.\n'),
+
             ],
           ),
         ),
