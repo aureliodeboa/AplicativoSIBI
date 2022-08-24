@@ -25,7 +25,7 @@ class _telareservalivroState extends State<telareservalivro> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue[400],
-       title: Text('Reserva de Livros'),
+       title: Text('Reserva  e  Renovaçao de Livros'),
       ),
       body: SingleChildScrollView(
         child: Center(

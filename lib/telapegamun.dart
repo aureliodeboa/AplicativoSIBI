@@ -22,7 +22,7 @@ class _telapergamunState extends State<telapergamun> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue[400],
+        backgroundColor: Colors.blue[400],title: Text('Como Consultar o Pergamum')
         
       ),
       body: SingleChildScrollView(
@@ -36,8 +36,8 @@ class _telapergamunState extends State<telapergamun> {
                   'e demais serviços disponíveis aos usuários via sistema Pergamum.\n'
                   ),
               TextButton.icon(
-                icon: Icon(Icons.link),
-                label: Text('Link para Cartilha'),
+                icon:Container(child: Image.asset('imagem/icones/pdf.png',width: 30,color: Colors.red[700], ),),
+                label: Text('Cartilha'),
                 onPressed: () => setState(() {
                   launchExternalWebsite("https://portais.univasf.edu.br/sibi/cartilha-tecnicas-de-utilizacao-do-sistema-pergamum.pdf");
 
@@ -52,8 +52,8 @@ class _telapergamunState extends State<telapergamun> {
                   '5) anote o número de chamada para localizar o documento no acervo;\n'
                   '6) Para consultar a quantidade e a disponibilidade de exemplares, clique em “exemplares”.\n'),
               TextButton.icon(
-                icon: Icon(Icons.link),
-                label: Text('Link para o Pergamum mobile'),
+                icon: Container(child: Image.asset('imagem/icones/pergamun.png',width: 30,color:Colors.amber[700] ),),
+                label: Text(' Acesse O Pergamum Mobile'),
                 onPressed: () => setState(() {
                   launchExternalWebsite("https://biblioteca.univasf.edu.br/pergamum/mobile/index.php");
 

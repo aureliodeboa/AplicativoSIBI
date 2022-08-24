@@ -13,8 +13,7 @@ class _telaguiausuarioState extends State<telaguiausuario> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue[400],
-      ),
+        backgroundColor: Colors.blue[400],title: Text('Guia do Usuario'),      ),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
