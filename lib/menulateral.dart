@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sibi/telaguiausuario.dart';
+import 'package:sibi/telapegamun.dart';
+import 'package:sibi/telareservalivro.dart';
+import 'package:sibi/telatutoriais.dart';
 
 class menulateral extends StatefulWidget {
   const menulateral({Key? key}) : super(key: key);
@@ -68,7 +71,10 @@ class _menulateralState extends State<menulateral> {
                     height: 20,
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => telapergamun()));
+                    },
                     child: Row(
                       children: [
                         Icon(Icons.search_outlined),
@@ -126,7 +132,8 @@ class _menulateralState extends State<menulateral> {
                     height: 20,
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () { Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => telatutoriais()));},
                     child: Row(children: [
                       Icon(Icons.subscriptions),
                       Text(' Tutoriais')
@@ -153,11 +160,14 @@ class _menulateralState extends State<menulateral> {
                     height: 20,
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => telareservalivro()));
+                    },
                     child: Row(
                       children: [
                         Icon(Icons.touch_app_outlined),
-                        Text(' Como Fazer uma reserva de um livro?')
+                        Text(' Reserva e Renovação de Livros')
                       ],
                     ),
                     style: ButtonStyle(
