@@ -1,27 +1,25 @@
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-final Uri _url = Uri.parse('https://biblioteca.univasf.edu.br/pergamum/mobile/index.php');
+import 'package:url_launcher/url_launcher_string.dart';
 class telareservalivro extends StatefulWidget {
   const telareservalivro({Key? key}) : super(key: key);
-
-
-
-
-
 
   @override
   State<telareservalivro> createState() => _telareservalivroState();
 }
 
 class _telareservalivroState extends State<telareservalivro> {
-  Future<void> _launchInBrowser(Uri url) async {
-    if (!await canLaunchUrl(url,
-      //mode:  LaunchMode.externalApplication,
-    )) {
-      throw 'Could not launch $url';
+  void launchExternalWebsite(String url) async {
+    var urlUri= Uri.parse(url);
+    if(await canLaunchUrl(urlUri)){
+      await launchUrl(urlUri, mode: LaunchMode.externalApplication);
+      }else {
+      throw 'could not lanch $urlUri';
     }
   }
-  final httpsUri = Uri.https('example.com', 'api/fetch', {'limit': '10'});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,10 +48,11 @@ class _telareservalivroState extends State<telareservalivro> {
                   '3) Em  seu perfil, estarão as obras pendentes de devolução;\n'
                   '4) selecione os livros que deseja renovar o empréstimo e clique sobre o botão “Renovar”.\n'),
               TextButton.icon(
-                icon: Icon(Icons.link),
-                label: Text('Link para o Pergamum'),
+                icon: Icon(Icons.local_offer_outlined,color: Colors.amber[700],),
+                label: Text('CLICK AQUI E RENOVE AGORA',style: TextStyle(color: Colors.blue,), ),
               onPressed: () => setState(() {
-                _launchInBrowser(_url);
+                    launchExternalWebsite("https://biblioteca.univasf.edu.br/pergamum/mobile/index.php");
+
               }
               ),)
             ],
