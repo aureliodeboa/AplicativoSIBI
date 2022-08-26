@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:sibi/teladocumentos.dart';
 import 'package:sibi/telaguiausuario.dart';
+import 'package:sibi/telanormalizacao.dart';
 import 'package:sibi/telapegamun.dart';
 import 'package:sibi/telareservalivro.dart';
 import 'package:sibi/telatutoriais.dart';
@@ -23,8 +25,7 @@ class _menulateralState extends State<menulateral> {
             accountEmail: Text(''),
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: NetworkImage(
-                    'https://biblioteca.univasf.edu.br/pergamum/img/logo_empresa.jpg'),
+                image: AssetImage('imagem/logosibiunivasf.jpg'),
               ),
             ),
           ),
@@ -103,11 +104,14 @@ class _menulateralState extends State<menulateral> {
                     height: 20,
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => teladocumentos()));
+                    },
                     child: Row(
                       children: [
                         Icon(Icons.collections_bookmark_outlined),
-                        Text(' Como Localizar Os livros nas estantes'),
+                        Text(' Documentos SIBI'),
                       ],
                     ),
                     style: ButtonStyle(
@@ -127,6 +131,38 @@ class _menulateralState extends State<menulateral> {
                       }
                     }) //cor de fundo
                         ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => telanormalizacao()));
+                    },
+                    child: Row(
+                      children: [
+                        Icon(Icons.border_color_outlined),
+                        Text(' Normalização'),
+                      ],
+                    ),
+                    style: ButtonStyle(
+                        shape: MaterialStateProperty.resolveWith((states) {
+                          return RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          );
+                        }), // Muda as Bordas
+                        fixedSize:
+                        MaterialStateProperty.resolveWith<Size?>((states) {
+                          return Size(300, 60);
+                        }), //tamanho
+                        backgroundColor:
+                        MaterialStateProperty.resolveWith<Color?>((states) {
+                          if (states.contains(MaterialState.pressed)) {
+                            return Colors.grey;
+                          }
+                        }) //cor de fundo
+                    ),
                   ),
                   SizedBox(
                     height: 20,
@@ -195,7 +231,7 @@ class _menulateralState extends State<menulateral> {
                     onPressed: () {},
                     child: Row(children: [
                       Icon(Icons.drafts),
-                      Text(' Carta de doação')
+                      Text(' Ficha Catolografica')
                     ]),
                     style: ButtonStyle(
                         shape: MaterialStateProperty.resolveWith((states) {
@@ -223,7 +259,7 @@ class _menulateralState extends State<menulateral> {
                     child: Row(
                       children: [
                         Icon(Icons.domain_add_outlined),
-                        Text(' Setores')
+                        Text(' Declaração nada consta')
                       ],
                     ),
                     style: ButtonStyle(

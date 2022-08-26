@@ -16,19 +16,26 @@ class _telaguiausuarioState extends State<telaguiausuario> {
         backgroundColor: Colors.blue[400],title: Text('Guia do Usuario'),      ),
       body: SingleChildScrollView(
         child: Center(
-          child: Column(
-            children: <Widget>[
-              Text(
-                'APRESENTAÇÃO',
-                style: TextStyle(
-                  fontSize: 25,
-                  foreground: Paint()
-                    ..style = PaintingStyle.stroke
-                    ..strokeWidth = 1
-                    ..color = Colors.blue[400]!,
+          child: Container(
+            padding:  EdgeInsets.fromLTRB(20, 20, 20, 20),
+            child: Column(
+              children: <Widget>[
+                Text('Apresentação',
+                  style: TextStyle(
+                    color: Colors.blue[800],
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    shadows:[
+                      Shadow(
+                        color: Colors.black54,
+                        blurRadius: 2,
+                        offset: Offset(2,1),
+                      ),
+                    ],
+                  ),
                 ),
-              )
-            ],
+              ],
+            ),
           ),
         ),
       ),

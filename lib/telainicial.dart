@@ -38,27 +38,11 @@ class _telainicialState extends State<telainicial> {
                           ),
                         ),
                         Text(
-                          textAlign: TextAlign.start,
-                          "    O SIBI é o responsável pela coordenação e administração das bibliotecas e pelos recursos informacionais que servem "
-                              "de suporte às atividades de ensino, pesquisa e extensão, conforme as políticas, planos e programas da Univasf.\n"
-                              "    O SIBI é composto por 07 (sete) bibliotecas, sendo 1 (uma) central e outras 06 (seis) setoriais.\n"
-                              "    A central:\n"
-                              "        -Com aproximadamente 2.148,60 m² de área construída, localizada no Campus Petrolina-PE\n"
-                              "    As setoriais localizadas nos campi:\n"
-                              "        -Juazeiro-BA com aproximadamente 604 m²\n"
-                              "        -Ciências Agrárias-PE com aproximadamente 753 m²\n"
-                              "        -São Raimundo Nonato-PI com aproximadamente 102 m²\n"
-                              "        -Senhor do Bonfim-BA com aproximadamente 181 m²\n"
-                              "        -Paulo Afonso com aproximadamente 82 m²\n"
-                              "        -E Salgueiro-PE que funciona provisoriamente em um espaço da biblioteca na Faculdade de Ciências Humanas do Sertão Central (Fachusc) até que o campus da universidade seja construído.",
-                          style: TextStyle(
-                            fontSize: 18,
-                            color: Colors.grey[900],
-
-                          ),
-
-                        ),
-                        Text('Apresentação em libras :',style: TextStyle(color: Colors.amber, fontSize: 30,)),
+                            textAlign: TextAlign.start,
+                            "O SIBI é o responsável pela coordenação e administração das bibliotecas e pelos recursos informacionais que servem "
+                                "de suporte às atividades de ensino, pesquisa e extensão, conforme as políticas, planos e programas da Univasf.\n",style: TextStyle(fontSize: 18,
+                            color: Colors.black),),
+                        Text('Apresentação do SIBI em libras ',style: TextStyle(color: Colors.amber[700], fontSize: 22,)),
                         YoutubePlayer(controller: YoutubePlayerController(
                             initialVideoId: 'rNsT5iGdsfo',
                             flags: YoutubePlayerFlags(
@@ -66,34 +50,64 @@ class _telainicialState extends State<telainicial> {
                               mute:  false,
                               showLiveFullscreenButton: true,
                             )),),
-                        Text('Objetivos do SIBI :',style: TextStyle(color: Colors.amber, fontSize: 30,)),
                         Text(
-                          "-Coordenar e supervisionar suas atividades técnicas.\n"
-                              "-Padronizar os serviços oferecidos à comunidade acadêmica da Universidade.\n"
-                              "-Auxiliar no processo de aquisição dos recursos de informação disponíveis na Universidade, bem como sua organização e divulgação.\n"
-                              "-Manter intercâmbio com instituições nacionais e internacionais, visando enriquecimento e diversidade do acervo.",
+                          textAlign: TextAlign.start,
+
+                              "    \n O SIBI é composto por 07 (sete) bibliotecas, sendo 1 (uma) central e outras 06 (seis) setoriais.\n"
+                              " \n A CENTRAL:\n"
+                              "    -Com aproximadamente 2.148,60 m² de área construída, localizada no Campus Petrolina-PE\n"
+                              "         \n AS SETORIAIS LOCALIZADAS NOS CAMPI:\n"
+                              "        \n -Juazeiro-BA \n"
+                              "        \n -Ciências Agrárias-PE \n"
+                              "        \n -São Raimundo Nonato-PI\n"
+                              "        \n -Senhor do Bonfim-BA \n"
+                              "        \n -Paulo Afonso-BA \n"
+                              "        \n - Salgueiro-PE \n"
+                                  "    \n - Serra da Capivara- PI \n",
+                          style: TextStyle(
+                            fontSize: 18,
+                              color: Colors.black
+
+                          ),
+
+                        ),
+
+                        Text('Objetivos do SIBI ',style: TextStyle(color: Colors.amber[700], fontSize: 25,)),
+                        Text(
+                          "   \n-Coordenar e supervisionar suas atividades técnicas.\n"
+                              "\n-Padronizar os serviços oferecidos à comunidade acadêmica da Universidade.\n"
+                              "\n-Auxiliar no processo de aquisição dos recursos de informação disponíveis na Universidade, bem como sua organização e divulgação.\n"
+                              "\n-Manter intercâmbio com instituições nacionais e internacionais, visando enriquecimento e diversidade do acervo.\n",
                           style: TextStyle(
                             fontSize: 18,
                             color: Colors.grey[900],
 
                           ),),
-                        Text('Serviços:',style: TextStyle(color: Colors.amber, fontSize: 30,)),
+                        Text('Serviços',style: TextStyle(color: Colors.amber[700], fontSize: 25,)),
                         Text(
-                          "-Consulta.\n"
-                              "-Empréstimo e devolução de material bibliográfico.\n"
-                              "-Declaração de Isenção de Débito.\n"
-                              "-Treinamento e orientação à pesquisa (Serviços de Referência).\n"
-                              "-Sistema Pergamum e bases científicas (Capes, Scielo, Bireme, etc) e uso das normas da ABNT.\n"
-                              "-Comutação Bibliográfica (IBICT/COMUT).\n"
-                              "-Serviço Cooperativo de Acesso a Documento (SCAD).\n"
-                              "-Ficha catalográfica (Catalogação na fonte).\n"
-                              "-Visita orientada.\n"
-                              "-Incorporação de material ao acervo.\n"
-                              "-Aquisição de material bibliográfico.\n"
-                              "-Solicitação de ISBN.\n",
+                          "\n-Consultas.\n"
+                              "\n-Empréstimo e devolução de material bibliográfico.\n"
+                              "\n-Declaração de Isenção de Débito.\n"
+                              "\n-Treinamento e orientação à pesquisa (Serviços de Referência).\n"
+                              "\n-Sistema Pergamum e bases científicas (Capes, Scielo, Bireme, etc) e uso das normas da ABNT.\n"
+                              "\n-Comutação Bibliográfica (IBICT/COMUT).\n"
+                              "\n-Serviço Cooperativo de Acesso a Documento (SCAD).\n"
+                              "\n-Ficha catalográfica (Catalogação na fonte).\n"
+                              "\n-Visita orientada.\n"
+                              "\n-Incorporação de material ao acervo.\n"
+                              "\n-Aquisição de material bibliográfico.\n"
+                              "\n-Solicitação de ISBN.\n",
                           style: TextStyle(
                             fontSize: 18,
-                            color: Colors.grey[900],),),
+                            color: Colors.black,),),
+
+                        Text('Cadastro de Usuários',style: TextStyle(color: Colors.amber[700], fontSize: 25,)),
+                        Text(
+                          "\n Os discentes vinculados à Univasf serão inscritos na biblioteca mediante comprovante de matrícula e documento de identificação com foto\n"
+                           "\n Servidores serão inscritos na biblioteca mediante  documento de identidade funcional ou comprovante devínculo com a Univasf e documento com foto.",
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,),),
                       ],
                     ),
 
