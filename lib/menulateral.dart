@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sibi/redesociais.dart';
 import 'package:sibi/teladocumentos.dart';
 import 'package:sibi/telaguiausuario.dart';
 import 'package:sibi/telanormalizacao.dart';
@@ -103,6 +104,40 @@ class _menulateralState extends State<menulateral> {
                   SizedBox(
                     height: 20,
                   ),
+
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => redesociais()));
+                    },
+                    child: Row(
+                      children: [
+                         Image.asset('imagem/icones/social.png',width: 25,color: Colors.white, ),
+                        Text('  Redes Sociais'),
+                      ],
+                    ),
+                    style: ButtonStyle(
+                        shape: MaterialStateProperty.resolveWith((states) {
+                          return RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          );
+                        }), // Muda as Bordas
+                        fixedSize:
+                        MaterialStateProperty.resolveWith<Size?>((states) {
+                          return Size(300, 60);
+                        }), //tamanho
+                        backgroundColor:
+                        MaterialStateProperty.resolveWith<Color?>((states) {
+                          if (states.contains(MaterialState.pressed)) {
+                            return Colors.grey;
+                          }
+                        }) //cor de fundo
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+
                   ElevatedButton(
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
@@ -143,7 +178,7 @@ class _menulateralState extends State<menulateral> {
                     child: Row(
                       children: [
                         Icon(Icons.border_color_outlined),
-                        Text(' Normalização'),
+                        Text(' Manual de Normalização'),
                       ],
                     ),
                     style: ButtonStyle(
