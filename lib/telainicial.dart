@@ -104,7 +104,11 @@ class _telainicialState extends State<telainicial> {
                         Text('Cadastro de Usuários',style: TextStyle(color: Colors.amber[700], fontSize: 25,)),
                         Text(
                           "\n Os discentes vinculados à Univasf serão inscritos na biblioteca mediante comprovante de matrícula e documento de identificação com foto\n"
-                           "\n Servidores serão inscritos na biblioteca mediante  documento de identidade funcional ou comprovante devínculo com a Univasf e documento com foto.",
+                           "\n Servidores serão inscritos na biblioteca mediante  documento de identidade funcional ou comprovante devínculo com a Univasf e documento com foto.\n"
+                          "\n Professores visitantes, substitutos, voluntários, associados e bolsistas terão acesso aos serviços da biblioteca mediante apresentação de documento "
+                              "de identificação com foto e comprovante de vínculo com a Instituição, constando a data inicio e término do contrato e documento com foto.\n "
+                            "\n Servidores do Hospital Universitário (EBSERH) terão acesso aos serviços da biblioteca mediante apresentação do último contracheque ou algum "
+                              "comprovante de vinculação com a EBSERH e um documento de identificação com foto. A comunidade externa terá acesso aos materiais através da consulta local.",
                           style: TextStyle(
                             fontSize: 18,
                             color: Colors.black,),),
