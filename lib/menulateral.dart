@@ -3,6 +3,7 @@ import 'package:sibi/redesociais.dart';
 import 'package:sibi/telacatolgrafica.dart';
 import 'package:sibi/teladocumentos.dart';
 import 'package:sibi/telaguiausuario.dart';
+import 'package:sibi/telanadaconsta.dart';
 import 'package:sibi/telanormalizacao.dart';
 import 'package:sibi/telapegamun.dart';
 import 'package:sibi/telareservalivro.dart';
@@ -174,6 +175,68 @@ class _menulateralState extends State<menulateral> {
                   ElevatedButton(
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => telacatolgrafica()));
+                    },
+                    child: Row(children: [
+                      Icon(Icons.drafts),
+                      Text(' Ficha Catolografica')
+                    ]),
+                    style: ButtonStyle(
+                        shape: MaterialStateProperty.resolveWith((states) {
+                          return RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          );
+                        }), // Muda as Bordas
+                        fixedSize:
+                        MaterialStateProperty.resolveWith<Size?>((states) {
+                          return Size(300, 60);
+                        }), //tamanho
+                        backgroundColor:
+                        MaterialStateProperty.resolveWith<Color?>((states) {
+                          if (states.contains(MaterialState.pressed)) {
+                            return Colors.grey;
+                          }
+                        }) //cor de fundo
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => telanadaconsta()));
+                    },
+                    child: Row(
+                      children: [
+                        Icon(Icons.school),
+                        Text(' Declaração Nada Consta')
+                      ],
+                    ),
+                    style: ButtonStyle(
+                        shape: MaterialStateProperty.resolveWith((states) {
+                          return RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          );
+                        }), // Muda as Bordas
+                        fixedSize:
+                        MaterialStateProperty.resolveWith<Size?>((states) {
+                          return Size(300, 60);
+                        }), //tamanho
+                        backgroundColor:
+                        MaterialStateProperty.resolveWith<Color?>((states) {
+                          if (states.contains(MaterialState.pressed)) {
+                            return Colors.grey;
+                          }
+                        }) //cor de fundo
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => telanormalizacao()));
                     },
                     child: Row(
@@ -263,65 +326,7 @@ class _menulateralState extends State<menulateral> {
                   SizedBox(
                     height: 20,
                   ),
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => telacatolgrafica()));
-                    },
-                    child: Row(children: [
-                      Icon(Icons.drafts),
-                      Text(' Ficha Catolografica')
-                    ]),
-                    style: ButtonStyle(
-                        shape: MaterialStateProperty.resolveWith((states) {
-                      return RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      );
-                    }), // Muda as Bordas
-                        fixedSize:
-                            MaterialStateProperty.resolveWith<Size?>((states) {
-                      return Size(300, 60);
-                    }), //tamanho
-                        backgroundColor:
-                            MaterialStateProperty.resolveWith<Color?>((states) {
-                      if (states.contains(MaterialState.pressed)) {
-                        return Colors.grey;
-                      }
-                    }) //cor de fundo
-                        ),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  ElevatedButton(
-                    onPressed: () {},
-                    child: Row(
-                      children: [
-                        Icon(Icons.domain_add_outlined),
-                        Text(' Declaração nada consta')
-                      ],
-                    ),
-                    style: ButtonStyle(
-                        shape: MaterialStateProperty.resolveWith((states) {
-                      return RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      );
-                    }), // Muda as Bordas
-                        fixedSize:
-                            MaterialStateProperty.resolveWith<Size?>((states) {
-                      return Size(300, 60);
-                    }), //tamanho
-                        backgroundColor:
-                            MaterialStateProperty.resolveWith<Color?>((states) {
-                      if (states.contains(MaterialState.pressed)) {
-                        return Colors.grey;
-                      }
-                    }) //cor de fundo
-                        ),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
+
                 ],
               ),
             ),
