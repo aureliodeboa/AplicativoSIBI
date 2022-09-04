@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sibi/redesociais.dart';
+import 'package:sibi/telacatolgrafica.dart';
 import 'package:sibi/teladocumentos.dart';
 import 'package:sibi/telaguiausuario.dart';
 import 'package:sibi/telanormalizacao.dart';
@@ -263,7 +264,10 @@ class _menulateralState extends State<menulateral> {
                     height: 20,
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => telacatolgrafica()));
+                    },
                     child: Row(children: [
                       Icon(Icons.drafts),
                       Text(' Ficha Catolografica')
