@@ -12,6 +12,7 @@ class _telainicialState extends State<telainicial> {
   @override
   Widget build(BuildContext context) {
     return  SingleChildScrollView(
+
       child: Column(
         children: [
           SizedBox(
