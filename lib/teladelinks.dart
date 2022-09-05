@@ -3,6 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
+import 'package:sibi/redesociais.dart';
+import 'package:sibi/telacatolgrafica.dart';
+import 'package:sibi/teladocumentos.dart';
+import 'package:sibi/telaguiausuario.dart';
+import 'package:sibi/telanadaconsta.dart';
+import 'package:sibi/telanormalizacao.dart';
+import 'package:sibi/telapegamun.dart';
+import 'package:sibi/telareservalivro.dart';
+import 'package:sibi/telatutoriais.dart';
 
 class teladelinks extends StatefulWidget {
   const teladelinks({Key? key}) : super(key: key);
@@ -20,11 +29,319 @@ class _teladelinksState extends State<teladelinks> {
       throw 'could not lanch $urlUri';
     }
   }
+ double _L=500,_H=60;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       body: Center(
+        child: SingleChildScrollView(
+          padding:  EdgeInsets.fromLTRB(10, 25, 10, 20),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment
+                .spaceBetween, // centraliza para ocupar so o tamanho necessario
+            mainAxisSize: MainAxisSize.min,
+
+            children: [
+              Image.asset('imagem/logosibiunivasf.jpg'),
+              SizedBox(
+                height: 20,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => telaguiausuario()));
+                },
+                child: Row(
+                  children: [
+                    Icon(Icons.person_outline),
+                    Text(
+                      ' Guia Do Usuario',
+                    ),
+                  ],
+                ),
+                style: ButtonStyle(
+                    shape: MaterialStateProperty.resolveWith((states) {
+                      return RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      );
+                    }), // Muda as Bordas
+                    fixedSize:
+                    MaterialStateProperty.resolveWith<Size?>((states) {
+                      return Size(_L,_H);
+                    }), //tamanho
+                    backgroundColor:
+                    MaterialStateProperty.resolveWith<Color?>((states) {
+                      if (states.contains(MaterialState.pressed)) {
+                        return Colors.grey;
+                      }
+                    }) //cor de fundo
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => telapergamun()));
+                },
+                child: Row(
+                  children: [
+                    Icon(Icons.search_outlined),
+                    Text(' Como Consultar o Pergamun?')
+                  ],
+                ),
+                style: ButtonStyle(
+                    shape: MaterialStateProperty.resolveWith((states) {
+                      return RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      );
+                    }), // Muda as Bordas
+                    fixedSize:
+                    MaterialStateProperty.resolveWith<Size?>((states) {
+                      return Size(_L,_H);
+                    }), //tamanho
+                    backgroundColor:
+                    MaterialStateProperty.resolveWith<Color?>((states) {
+                      if (states.contains(MaterialState.pressed)) {
+                        return Colors.grey;
+                      }
+                    }) //cor de fundo
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => redesociais()));
+                },
+                child: Row(
+                  children: [
+                    Image.asset('imagem/icones/social.png',width: 25,color: Colors.white, ),
+                    Text('  Redes Sociais'),
+                  ],
+                ),
+                style: ButtonStyle(
+                    shape: MaterialStateProperty.resolveWith((states) {
+                      return RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      );
+                    }), // Muda as Bordas
+                    fixedSize:
+                    MaterialStateProperty.resolveWith<Size?>((states) {
+                      return Size(_L,_H);
+                    }), //tamanho
+                    backgroundColor:
+                    MaterialStateProperty.resolveWith<Color?>((states) {
+                      if (states.contains(MaterialState.pressed)) {
+                        return Colors.grey;
+                      }
+                    }) //cor de fundo
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => teladocumentos()));
+                },
+                child: Row(
+                  children: [
+                    Icon(Icons.collections_bookmark_outlined),
+                    Text(' Documentos SIBI'),
+                  ],
+                ),
+                style: ButtonStyle(
+                    shape: MaterialStateProperty.resolveWith((states) {
+                      return RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      );
+                    }), // Muda as Bordas
+                    fixedSize:
+                    MaterialStateProperty.resolveWith<Size?>((states) {
+                      return Size(_L,_H);
+                    }), //tamanho
+                    backgroundColor:
+                    MaterialStateProperty.resolveWith<Color?>((states) {
+                      if (states.contains(MaterialState.pressed)) {
+                        return Colors.grey;
+                      }
+                    }) //cor de fundo
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => telacatolgrafica()));
+                },
+                child: Row(children: [
+                  Icon(Icons.drafts),
+                  Text(' Ficha Catolografica')
+                ]),
+                style: ButtonStyle(
+                    shape: MaterialStateProperty.resolveWith((states) {
+                      return RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      );
+                    }), // Muda as Bordas
+                    fixedSize:
+                    MaterialStateProperty.resolveWith<Size?>((states) {
+                      return Size(_L,_H);
+                    }), //tamanho
+                    backgroundColor:
+                    MaterialStateProperty.resolveWith<Color?>((states) {
+                      if (states.contains(MaterialState.pressed)) {
+                        return Colors.grey;
+                      }
+                    }) //cor de fundo
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => telanadaconsta()));
+                },
+                child: Row(
+                  children: [
+                    Icon(Icons.school),
+                    Text(' Declaração Nada Consta')
+                  ],
+                ),
+                style: ButtonStyle(
+                    shape: MaterialStateProperty.resolveWith((states) {
+                      return RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      );
+                    }), // Muda as Bordas
+                    fixedSize:
+                    MaterialStateProperty.resolveWith<Size?>((states) {
+                      return Size(_L,_H);
+                    }), //tamanho
+                    backgroundColor:
+                    MaterialStateProperty.resolveWith<Color?>((states) {
+                      if (states.contains(MaterialState.pressed)) {
+                        return Colors.grey;
+                      }
+                    }) //cor de fundo
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => telanormalizacao()));
+                },
+                child: Row(
+                  children: [
+                    Icon(Icons.border_color_outlined),
+                    Text(' Manual de Normalização'),
+                  ],
+                ),
+                style: ButtonStyle(
+                    shape: MaterialStateProperty.resolveWith((states) {
+                      return RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      );
+                    }), // Muda as Bordas
+                    fixedSize:
+                    MaterialStateProperty.resolveWith<Size?>((states) {
+                      return Size(_L,_H);
+                    }), //tamanho
+                    backgroundColor:
+                    MaterialStateProperty.resolveWith<Color?>((states) {
+                      if (states.contains(MaterialState.pressed)) {
+                        return Colors.grey;
+                      }
+                    }) //cor de fundo
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              ElevatedButton(
+                onPressed: () { Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => telatutoriais()));},
+                child: Row(children: [
+                  Icon(Icons.subscriptions),
+                  Text(' Tutoriais')
+                ]),
+                style: ButtonStyle(
+                    shape: MaterialStateProperty.resolveWith((states) {
+                      return RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      );
+                    }), // Muda as Bordas
+                    fixedSize:
+                    MaterialStateProperty.resolveWith<Size?>((states) {
+                      return Size(_L,_H);
+                    }), //tamanho
+                    backgroundColor:
+                    MaterialStateProperty.resolveWith<Color?>((states) {
+                      if (states.contains(MaterialState.pressed)) {
+                        return Colors.grey;
+                      }
+                    }) //cor de fundo
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => telareservalivro()));
+                },
+                child: Row(
+                  children: [
+                    Icon(Icons.touch_app_outlined),
+                    Text(' Reserva e Renovação de Livros')
+                  ],
+                ),
+                style: ButtonStyle(
+                    shape: MaterialStateProperty.resolveWith((states) {
+                      return RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      );
+                    }), // Muda as Bordas
+                    fixedSize:
+                    MaterialStateProperty.resolveWith<Size?>((states) {
+                      return Size(_L,_H);
+                    }), //tamanho
+                    backgroundColor:
+                    MaterialStateProperty.resolveWith<Color?>((states) {
+                      if (states.contains(MaterialState.pressed)) {
+                        return Colors.grey;
+                      }
+                    }) //cor de fundo
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+
+            ],
+          ),
+        ),
+      ),
+    );
+
+  }
+}
+/* Center(
         child: Column(
           children: [
             TextButton.icon(
@@ -78,8 +395,4 @@ class _teladelinksState extends State<teladelinks> {
 
           ],
         ),
-      ),
-    );
-
-  }
-}
+      ),  */

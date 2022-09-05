@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sibi/menulateral.dart';
 import 'package:sibi/telabiblioteca.dart';
 import 'package:sibi/teladelinks.dart';
 import 'package:sibi/telainicial.dart';
@@ -19,7 +18,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       backgroundColor: Colors.white,
 
-      endDrawer: menulateral(), // Menu Hambuguer
+      // Menu Hambuguer
       appBar: AppBar(
         backgroundColor: Colors.blue,
       ),
@@ -44,7 +43,7 @@ class _HomeState extends State<Home> {
           },
           items: [
             BottomNavigationBarItem(
-                icon: Icon(color: Colors.white, Icons.trending_up_outlined),
+                icon: Icon(color: Colors.white, Icons.dehaze_outlined),
                 label: ''),
             BottomNavigationBarItem(
                 icon: Icon(color: Colors.white, Icons.home_outlined),

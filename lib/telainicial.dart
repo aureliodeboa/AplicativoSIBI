@@ -43,7 +43,7 @@ class _telainicialState extends State<telainicial> {
                             "O SIBI é o responsável pela coordenação e administração das bibliotecas e pelos recursos informacionais que servem "
                                 "de suporte às atividades de ensino, pesquisa e extensão, conforme as políticas, planos e programas da Univasf.\n",style: TextStyle(fontSize: 18,
                             color: Colors.black),),
-                        Text('Apresentação do SIBI em libras ',style: TextStyle(color: Colors.amber[700], fontSize: 22,)),
+                        Text('Apresentação do SIBI em libras\n ',style: TextStyle(color: Colors.amber[700], fontSize: 22,)),
                         YoutubePlayer(controller: YoutubePlayerController(
                             initialVideoId: 'rNsT5iGdsfo',
                             flags: YoutubePlayerFlags(
