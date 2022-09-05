@@ -21,11 +21,14 @@ class _telabibliotecaState extends State<telabiblioteca> {
     return Container(
       color: Colors.white,
       child: SingleChildScrollView(
-        padding: EdgeInsets.fromLTRB(70, 10, 0, 20),
+        padding:EdgeInsets.fromLTRB(10, 25, 10, 20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-
+            Image.asset('imagem/logosibiunivasf.jpg',),
+            SizedBox(
+              height: 20,
+            ),
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).push(
