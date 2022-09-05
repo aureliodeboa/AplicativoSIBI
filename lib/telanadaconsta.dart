@@ -30,7 +30,7 @@ class _telanadaconstaState extends State<telanadaconsta> {
 
           child: Column(
             children: [
-              Text("\n Para que o discente conclua a graduação  na UNIVASF e receba o tão esperado diploma, é necessário emitir a declaração de isenção de débito ❝ nada consta ❞ "
+              Text("\n Para que o discente conclua a graduação  na UNIVASF e receba o tão esperado diploma, é necessário emitir a declaração de isenção de débito “ nada consta “ "
                   "a seguir é demonstrado o passo a passo para emitir: \n "),
               Text("\n• Primeiro deve-se acessar o Sistema Pergamum, disponível no link abaixo ou pelo Portal SIBI"),
               Text("\n• Logar-se com seu CPF e a senha da biblioteca, as mesmas credenciais usadas para pegar um livro emprestado na biblioteca \n"
@@ -38,8 +38,8 @@ class _telanadaconstaState extends State<telanadaconsta> {
               Image.asset('imagem/nadaconsta.jpg',width: 350,height: 300, ),
               Text("\n•Logo após será aberto uma  notificação para confirmar, como mostra a próxima imagem:"),
               Image.asset('imagem/nadaconsta2.png',width: 350,height: 300),
-              Text("\n• Logo após será emitido o nada consta\n"),
-              Text("\n Caso não tenha ficado claro  veja o tutorial a seguir :\n"),
+              Text("\n• Logo após será emitido o “ nada consta ”                           \n"),
+              Text("\n Caso não tenha ficado claro  veja o tutorial a seguir :        \n"),
               YoutubePlayer(controller: YoutubePlayerController(
                   initialVideoId: 'iLDxNersLDQ',
                   flags: YoutubePlayerFlags(
