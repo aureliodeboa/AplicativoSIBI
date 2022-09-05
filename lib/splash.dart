@@ -16,9 +16,8 @@ class _SplashState extends State<Splash> {
     super.initState();
 
     Timer(Duration(seconds:3),(){
-      Navigator.push(context,MaterialPageRoute(
-        builder: (context)=>Home(),
-      ));
+      Navigator.pushReplacement(context,MaterialPageRoute(
+              builder: (context)=>Home(),));
     });
 
   }
@@ -28,8 +27,8 @@ class _SplashState extends State<Splash> {
     return Scaffold(
       body: Center(
         child: Container(
-          height: 300.0,
-          width:  300.0,
+            height: 300.0,
+            width:  300.0,
             child:
             Image.asset('imagem/sibilogo.png')
         ),
