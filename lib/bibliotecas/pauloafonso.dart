@@ -11,19 +11,21 @@ class _pauloafonsoState extends State<pauloafonso> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(backgroundColor: Colors.blue[400]),
-      body: Column(
+      body: SingleChildScrollView(
+        padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+        child: Column(
         children: [
-          Text('Biblioteca Campus Paulo Afonso',textAlign: TextAlign.center,style: TextStyle(color: Colors.amber, fontSize: 30,)),
+          Text('Biblioteca Campus Paulo Afonso\n',textAlign: TextAlign.center,style: TextStyle(color: Colors.amber, fontSize: 30,)),
           Container(child: Image.asset('imagem/pauloafonso.png'),),
-          Text('Responsável: Jaqueline Silva de Souza (Bibliotecária - Biblioteca de Paulo Afonso)'
-              ' Endereço: Avenida da Amizade, s/n Bairro: Sal Torrado '
-              ' Paulo Afonso-BA, CEP: 48607-190 '
-              ' Telefone: 75 3282-3459 '
-              'E-mail: biblioteca.paf@univasf.edu.br'
-              'Equipe: Assistente em Administração: Lorena Carvalho de Morais Sandes'
-              'Atendente Lucicleidi Vitória de Freitas', style: TextStyle( fontSize: 15)),
+          Text('\nResponsável: Jaqueline Silva de Souza (Bibliotecária - Biblioteca de Paulo Afonso)\n'
+              '\nEndereço: Avenida da Amizade, s/n Bairro: Sal Torrado\n '
+              '\nPaulo Afonso-BA, CEP: 48607-190 \n'
+              '\nTelefone: 75 3282-3459 \n'
+              '\nE-mail: biblioteca.paf@univasf.edu.br\n'
+              '\nEquipe: Assistente em Administração: Lorena Carvalho de Morais Sandes\n'
+              '\nAtendente Lucicleidi Vitória de Freitas', style: TextStyle( fontSize: 15)),
         ],
-      ),
+      ),),
 
     );
   }

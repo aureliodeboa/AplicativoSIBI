@@ -27,6 +27,7 @@ class _HomeState extends State<Home> {
         index: _opcaoselecionada,
         children: <Widget>[
           teladelinks(),
+          //menulateral(),
           telainicial(),
           telabiblioteca(),
         ],

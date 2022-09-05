@@ -100,6 +100,15 @@ class _telanormalizacaoState extends State<telanormalizacao> {
 
                 }
                 ),),
+              TextButton.icon(
+                icon: Container(child: Image.asset('imagem/icones/deposito.png',width: 28,color: Colors.amber[700], ),),
+                label: Text('Depósito de Trabalhos Acadêmicos                           ',),
+                onPressed: () => setState(() {
+                  launchExternalWebsite("https://portais.univasf.edu.br/sibi/informacao-ao-usuario/orientacoes-para-entrega-de-trabalhos-academicos");
+
+                }
+                ),),
+
 
               Text("\n ATENCÃO:                                                                                                        \n",style: TextStyle(inherit: true,color: Colors.black),),
               Text(" Trabalhos que decorram de atividades financiadas, integral ou parcialmente, pela CAPES, deverão, obrigatoriamente, fazer referência ao apoio recebido conforme Portaria nº 206, de 4 de setembro de 2018. Indica-se que esta menção seja feita no último parágrafo de agradecimento, utilizando-se da expressão:\n"
