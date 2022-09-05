@@ -39,7 +39,7 @@ class _telaguiausuarioState extends State<telaguiausuario> {
                   "O SIBI é o responsável pela coordenação e administração das bibliotecas e pelos recursos informacionais que servem "
                       "de suporte às atividades de ensino, pesquisa e extensão, conforme as políticas, planos e programas da Univasf.\n",style: TextStyle(fontSize: 18,
                     color: Colors.black),),
-                Text('Epréstimo de Materiais  ',style: TextStyle(color: Colors.amber[700], fontSize: 25,)),
+                Text('Empréstimo de Materiais  ',style: TextStyle(color: Colors.amber[700], fontSize: 25,)),
                 Text("O prazo de empréstimo domiciliar varia de acordo com a categoria do usuário\n ",style: TextStyle(fontSize: 18,color: Colors.black)),
                 Image.asset('imagem/prazos.png',width: 350,height: 300),
                 Text("\n As obras de consulta local poderão ser retiradas para empréstimo especial por um período de 02 (duas) horas.\n ",style: TextStyle(fontSize: 18,color: Colors.black)),
