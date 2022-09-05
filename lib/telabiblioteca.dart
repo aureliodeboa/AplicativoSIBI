@@ -21,9 +21,11 @@ class _telabibliotecaState extends State<telabiblioteca> {
     return Container(
       color: Colors.white,
       child: SingleChildScrollView(
+        padding: EdgeInsets.fromLTRB(70, 10, 0, 20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
+
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).push(
@@ -33,8 +35,7 @@ class _telabibliotecaState extends State<telabiblioteca> {
                 children: [
                   Icon(Icons.account_balance),
                   Text(
-                    ' Petrolina',
-                  ),
+                    ' Petrolina'),
                 ],
               ),
               style: ButtonStyle(
@@ -44,14 +45,16 @@ class _telabibliotecaState extends State<telabiblioteca> {
                 );
               }), // Muda as Bordas
                   fixedSize: MaterialStateProperty.resolveWith<Size?>((states) {
-                return Size(400, 60);
+                return Size(400, 70);
               }), //tamanho
-                  backgroundColor:
-                      MaterialStateProperty.resolveWith<Color?>((states) {
-                if (states.contains(MaterialState.pressed)) {
-                  return Colors.grey;
-                }
-              }) //cor de fundo
+                backgroundColor:MaterialStateProperty.resolveWith<Color?>((states) {
+                  if (states.contains(MaterialState.pressed)) {
+                    return Colors.grey;
+                  }
+                }),
+
+
+                //cor de fundo
                   ),
             ),
             SizedBox(
@@ -77,7 +80,7 @@ class _telabibliotecaState extends State<telabiblioteca> {
                 );
               }), // Muda as Bordas
                   fixedSize: MaterialStateProperty.resolveWith<Size?>((states) {
-                return Size(400, 60);
+                return Size(400, 70);
               }), //tamanho
                   backgroundColor:
                       MaterialStateProperty.resolveWith<Color?>((states) {
@@ -110,7 +113,7 @@ class _telabibliotecaState extends State<telabiblioteca> {
                 );
               }), // Muda as Bordas
                   fixedSize: MaterialStateProperty.resolveWith<Size?>((states) {
-                return Size(400, 60);
+                return Size(400, 70);
               }), //tamanho
                   backgroundColor:
                       MaterialStateProperty.resolveWith<Color?>((states) {
@@ -143,7 +146,7 @@ class _telabibliotecaState extends State<telabiblioteca> {
                 );
               }), // Muda as Bordas
                   fixedSize: MaterialStateProperty.resolveWith<Size?>((states) {
-                return Size(400, 60);
+                return Size(400, 70);
               }), //tamanho
                   backgroundColor:
                       MaterialStateProperty.resolveWith<Color?>((states) {
@@ -176,7 +179,7 @@ class _telabibliotecaState extends State<telabiblioteca> {
                 );
               }), // Muda as Bordas
                   fixedSize: MaterialStateProperty.resolveWith<Size?>((states) {
-                return Size(400, 60);
+                return Size(400, 70);
               }), //tamanho
                   backgroundColor:
                       MaterialStateProperty.resolveWith<Color?>((states) {
@@ -207,7 +210,7 @@ class _telabibliotecaState extends State<telabiblioteca> {
                 );
               }), // Muda as Bordas
                   fixedSize: MaterialStateProperty.resolveWith<Size?>((states) {
-                return Size(400, 60);
+                return Size(400, 70);
               }), //tamanho
                   backgroundColor:
                       MaterialStateProperty.resolveWith<Color?>((states) {
@@ -240,7 +243,7 @@ class _telabibliotecaState extends State<telabiblioteca> {
                 );
               }), // Muda as Bordas
                   fixedSize: MaterialStateProperty.resolveWith<Size?>((states) {
-                return Size(400, 60);
+                return Size(400, 70);
               }), //tamanho
                   backgroundColor:
                       MaterialStateProperty.resolveWith<Color?>((states) {
@@ -273,7 +276,7 @@ class _telabibliotecaState extends State<telabiblioteca> {
                 );
               }), // Muda as Bordas
                   fixedSize: MaterialStateProperty.resolveWith<Size?>((states) {
-                return Size(400, 60);
+                return Size(400, 70);
               }), //tamanho
                   backgroundColor:
                       MaterialStateProperty.resolveWith<Color?>((states) {

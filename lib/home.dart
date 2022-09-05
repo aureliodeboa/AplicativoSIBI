@@ -34,7 +34,7 @@ class _HomeState extends State<Home> {
       bottomNavigationBar: BottomNavigationBar(
           selectedFontSize: 0,
           iconSize: 35,
-          backgroundColor: Colors.blue[400],
+          backgroundColor: Colors.blue,
           currentIndex: _opcaoselecionada,
           onTap: (opcao) {
             setState(() {
@@ -43,7 +43,7 @@ class _HomeState extends State<Home> {
           },
           items: [
             BottomNavigationBarItem(
-                icon: Icon(color: Colors.white, Icons.check_box_outlined),
+                icon: Icon(color: Colors.white, Icons.trending_up_outlined),
                 label: ''),
             BottomNavigationBarItem(
                 icon: Icon(color: Colors.white, Icons.home_outlined),
