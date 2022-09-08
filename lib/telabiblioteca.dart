@@ -25,7 +25,7 @@ class _telabibliotecaState extends State<telabiblioteca> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Image.asset('imagem/logosibiunivasf.jpg',),
+            // Image.asset('imagem/logosibiunivasf.jpg',),
             SizedBox(
               height: 20,
             ),
@@ -36,9 +36,16 @@ class _telabibliotecaState extends State<telabiblioteca> {
               },
               child: Row(
                 children: [
-                  Icon(Icons.account_balance),
+                  
+                  Icon(
+                    Icons.account_balance,
+                    size: 30.0,
+                  ),
+                  
                   Text(
-                    ' Petrolina'),
+                    ' Petrolina', 
+                    style: const TextStyle(fontSize: 20),
+                  ),
                 ],
               ),
               style: ButtonStyle(
@@ -70,9 +77,15 @@ class _telabibliotecaState extends State<telabiblioteca> {
               },
               child: Row(
                 children: [
-                  Icon(Icons.account_balance),
+                  
+                  Icon(
+                    Icons.account_balance,
+                    size: 30.0,
+                  ),
+                  
                   Text(
-                    ' Juazeiro',
+                    ' Juazeiro', 
+                    style: const TextStyle(fontSize: 20),
                   ),
                 ],
               ),
@@ -103,10 +116,17 @@ class _telabibliotecaState extends State<telabiblioteca> {
               },
               child: Row(
                 children: [
-                  Icon(Icons.account_balance),
-                  Text(
-                    ' Biblioteca Espaço Plural',
+                  
+                  Icon(
+                    Icons.account_balance,
+                    size: 30.0,
                   ),
+                  
+                  Text(
+                    ' Biblioteca Espaço Plural', 
+                    style: const TextStyle(fontSize: 20),
+                  ),
+
                 ],
               ),
               style: ButtonStyle(
@@ -136,9 +156,15 @@ class _telabibliotecaState extends State<telabiblioteca> {
               },
               child: Row(
                 children: [
-                  Icon(Icons.account_balance),
+                  
+                  Icon(
+                    Icons.account_balance,
+                    size: 30.0,
+                  ),
+                  
                   Text(
-                    ' Senhor do Bonfim',
+                    ' Senhor do Bonfim', 
+                    style: const TextStyle(fontSize: 20),
                   ),
                 ],
               ),
@@ -169,9 +195,15 @@ class _telabibliotecaState extends State<telabiblioteca> {
               },
               child: Row(
                 children: [
-                  Icon(Icons.account_balance),
+                  
+                  Icon(
+                    Icons.account_balance,
+                    size: 30.0,
+                  ),
+                  
                   Text(
-                    ' Paulo Afonso',
+                    ' Paulo Afonso', 
+                    style: const TextStyle(fontSize: 20),
                   ),
                 ],
               ),
@@ -200,10 +232,17 @@ class _telabibliotecaState extends State<telabiblioteca> {
                   builder: (context) => salgueiro()));},
               child: Row(
                 children: [
-                  Icon(Icons.account_balance),
-                  Text(
-                    ' Salgueiro',
+                  
+                  Icon(
+                    Icons.account_balance,
+                    size: 30.0,
                   ),
+                  
+                  Text(
+                    ' Salgueiro', 
+                    style: const TextStyle(fontSize: 20),
+                  ),
+
                 ],
               ),
               style: ButtonStyle(
@@ -233,9 +272,15 @@ class _telabibliotecaState extends State<telabiblioteca> {
               },
               child: Row(
                 children: [
-                  Icon(Icons.account_balance),
+                  
+                  Icon(
+                    Icons.account_balance,
+                    size: 30.0,
+                  ),
+                  
                   Text(
-                    ' Serra da Capivara',
+                    ' São Raimundo Notato', 
+                    style: const TextStyle(fontSize: 20),
                   ),
                 ],
               ),
@@ -266,9 +311,15 @@ class _telabibliotecaState extends State<telabiblioteca> {
               },
               child: Row(
                 children: [
-                  Icon(Icons.account_balance),
+                  
+                  Icon(
+                    Icons.account_balance,
+                    size: 30.0,
+                  ),
+                  
                   Text(
-                    ' Ciências Agrárias',
+                    ' Campus de Ciências Agrárias', 
+                    style: const TextStyle(fontSize: 20),
                   ),
                 ],
               ),
