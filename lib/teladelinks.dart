@@ -42,7 +42,7 @@ class _teladelinksState extends State<teladelinks> {
             mainAxisSize: MainAxisSize.min,
 
             children: [
-              Image.asset('imagem/logosibiunivasf.jpg'),
+              // Image.asset('imagem/logosibiunivasf.jpg'),
               SizedBox(
                 height: 20,
               ),
@@ -53,9 +53,15 @@ class _teladelinksState extends State<teladelinks> {
                 },
                 child: Row(
                   children: [
-                    Icon(Icons.person_outline),
+                    
+                    Icon(
+                      Icons.person_outline,
+                      size: 30.0,
+                    ),
+                    
                     Text(
-                      ' Guia Do Usuario',
+                      ' Guia do Usuário', 
+                      style: const TextStyle(fontSize: 20),
                     ),
                   ],
                 ),
@@ -67,7 +73,7 @@ class _teladelinksState extends State<teladelinks> {
                     }), // Muda as Bordas
                     fixedSize:
                     MaterialStateProperty.resolveWith<Size?>((states) {
-                      return Size(_L,_H);
+                      return Size(400, 70);
                     }), //tamanho
                     backgroundColor:
                     MaterialStateProperty.resolveWith<Color?>((states) {
@@ -87,8 +93,16 @@ class _teladelinksState extends State<teladelinks> {
                 },
                 child: Row(
                   children: [
-                    Icon(Icons.search_outlined),
-                    Text(' Como Consultar o Pergamun?')
+                    
+                    Icon(
+                      Icons.search_outlined,
+                      size: 30.0
+                    ),
+                    
+                    Text(
+                      ' Como Consultar o Pergamum?', 
+                      style: const TextStyle(fontSize: 20),
+                    )
                   ],
                 ),
                 style: ButtonStyle(
@@ -99,7 +113,7 @@ class _teladelinksState extends State<teladelinks> {
                     }), // Muda as Bordas
                     fixedSize:
                     MaterialStateProperty.resolveWith<Size?>((states) {
-                      return Size(_L,_H);
+                      return Size(400, 70);
                     }), //tamanho
                     backgroundColor:
                     MaterialStateProperty.resolveWith<Color?>((states) {
@@ -120,8 +134,16 @@ class _teladelinksState extends State<teladelinks> {
                 },
                 child: Row(
                   children: [
-                    Image.asset('imagem/icones/social.png',width: 25,color: Colors.white, ),
-                    Text('  Redes Sociais'),
+                    
+                    Icon(
+                      Icons.polyline,
+                      size: 30.0,
+                    ),
+                    
+                    Text(
+                      ' Redes Sociais', 
+                      style: const TextStyle(fontSize: 20),
+                    ),
                   ],
                 ),
                 style: ButtonStyle(
@@ -132,7 +154,7 @@ class _teladelinksState extends State<teladelinks> {
                     }), // Muda as Bordas
                     fixedSize:
                     MaterialStateProperty.resolveWith<Size?>((states) {
-                      return Size(_L,_H);
+                      return Size(400, 70);
                     }), //tamanho
                     backgroundColor:
                     MaterialStateProperty.resolveWith<Color?>((states) {
@@ -153,8 +175,16 @@ class _teladelinksState extends State<teladelinks> {
                 },
                 child: Row(
                   children: [
-                    Icon(Icons.collections_bookmark_outlined),
-                    Text(' Documentos SIBI'),
+                    
+                    Icon(
+                      Icons.collections_bookmark_outlined,
+                      size: 30.0,
+                    ),
+                    
+                    Text(
+                      ' Documentos SIBI', 
+                      style: const TextStyle(fontSize: 20),
+                    ),
                   ],
                 ),
                 style: ButtonStyle(
@@ -165,7 +195,7 @@ class _teladelinksState extends State<teladelinks> {
                     }), // Muda as Bordas
                     fixedSize:
                     MaterialStateProperty.resolveWith<Size?>((states) {
-                      return Size(_L,_H);
+                      return Size(400, 70);
                     }), //tamanho
                     backgroundColor:
                     MaterialStateProperty.resolveWith<Color?>((states) {
@@ -184,8 +214,16 @@ class _teladelinksState extends State<teladelinks> {
                       builder: (context) => telacatolgrafica()));
                 },
                 child: Row(children: [
-                  Icon(Icons.drafts),
-                  Text(' Ficha Catolografica')
+                  
+                  Icon(
+                    Icons.drafts,
+                    size: 30.0,
+                  ),
+                  
+                  Text(
+                    ' Ficha Catalográfica', 
+                    style: const TextStyle(fontSize: 20),
+                  )
                 ]),
                 style: ButtonStyle(
                     shape: MaterialStateProperty.resolveWith((states) {
@@ -195,7 +233,7 @@ class _teladelinksState extends State<teladelinks> {
                     }), // Muda as Bordas
                     fixedSize:
                     MaterialStateProperty.resolveWith<Size?>((states) {
-                      return Size(_L,_H);
+                      return Size(400, 70);
                     }), //tamanho
                     backgroundColor:
                     MaterialStateProperty.resolveWith<Color?>((states) {
@@ -215,8 +253,16 @@ class _teladelinksState extends State<teladelinks> {
                 },
                 child: Row(
                   children: [
-                    Icon(Icons.school),
-                    Text(' Declaração Nada Consta')
+                    
+                    Icon(
+                      Icons.check,
+                      size: 30.0,
+                    ),
+                    
+                    Text(
+                      ' Declaração Nada Consta', 
+                      style: const TextStyle(fontSize: 20),
+                    )
                   ],
                 ),
                 style: ButtonStyle(
@@ -227,7 +273,7 @@ class _teladelinksState extends State<teladelinks> {
                     }), // Muda as Bordas
                     fixedSize:
                     MaterialStateProperty.resolveWith<Size?>((states) {
-                      return Size(_L,_H);
+                      return Size(400, 70);
                     }), //tamanho
                     backgroundColor:
                     MaterialStateProperty.resolveWith<Color?>((states) {
@@ -247,8 +293,16 @@ class _teladelinksState extends State<teladelinks> {
                 },
                 child: Row(
                   children: [
-                    Icon(Icons.border_color_outlined),
-                    Text(' Manual de Normalização'),
+                    
+                    Icon(
+                      Icons.border_color_outlined,
+                      size: 30.0,
+                    ),
+                    
+                    Text(
+                      ' Manual de Normalização', 
+                      style: const TextStyle(fontSize: 20),
+                    ),
                   ],
                 ),
                 style: ButtonStyle(
@@ -259,7 +313,7 @@ class _teladelinksState extends State<teladelinks> {
                     }), // Muda as Bordas
                     fixedSize:
                     MaterialStateProperty.resolveWith<Size?>((states) {
-                      return Size(_L,_H);
+                      return Size(400, 70);
                     }), //tamanho
                     backgroundColor:
                     MaterialStateProperty.resolveWith<Color?>((states) {
@@ -274,10 +328,19 @@ class _teladelinksState extends State<teladelinks> {
               ),
               ElevatedButton(
                 onPressed: () { Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => telatutoriais()));},
+                    builder: (context) => telatutoriais()));
+                },
                 child: Row(children: [
-                  Icon(Icons.subscriptions),
-                  Text(' Tutoriais')
+                  
+                  Icon(
+                    Icons.school,
+                    size: 30.0,
+                  ),
+                  
+                  Text(
+                    ' Tutoriais', 
+                    style: const TextStyle(fontSize: 20),
+                  )
                 ]),
                 style: ButtonStyle(
                     shape: MaterialStateProperty.resolveWith((states) {
@@ -287,7 +350,7 @@ class _teladelinksState extends State<teladelinks> {
                     }), // Muda as Bordas
                     fixedSize:
                     MaterialStateProperty.resolveWith<Size?>((states) {
-                      return Size(_L,_H);
+                      return Size(400, 70);
                     }), //tamanho
                     backgroundColor:
                     MaterialStateProperty.resolveWith<Color?>((states) {
@@ -307,8 +370,15 @@ class _teladelinksState extends State<teladelinks> {
                 },
                 child: Row(
                   children: [
-                    Icon(Icons.touch_app_outlined),
-                    Text(' Reserva e Renovação de Livros')
+                    
+                    Icon(
+                      Icons.touch_app_outlined,
+                      size: 30.0,
+                    ),
+                    
+                    Text(' Reserva e Renovação de Livros', 
+                        style: const TextStyle(fontSize: 20),
+                    )
                   ],
                 ),
                 style: ButtonStyle(
@@ -319,7 +389,7 @@ class _teladelinksState extends State<teladelinks> {
                     }), // Muda as Bordas
                     fixedSize:
                     MaterialStateProperty.resolveWith<Size?>((states) {
-                      return Size(_L,_H);
+                      return Size(400, 70);
                     }), //tamanho
                     backgroundColor:
                     MaterialStateProperty.resolveWith<Color?>((states) {
