@@ -11,25 +11,240 @@ class _telapetrolinaState extends State<telapetrolina> {
   Widget build(BuildContext context) {
     return Scaffold(
 
-      appBar: AppBar(backgroundColor: Colors.blue[400]),
-      body: SingleChildScrollView(
-        padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
-        child:  Column(
-          children: [
-          Text('Biblioteca Campus Petrolina',textAlign: TextAlign.center,style: TextStyle(color: Colors.amber[700], fontSize: 30,)),
-          Container(child: Image.asset('imagem/campuspetrolina.png'),),
-          Text('\n Responsável: Ana Paula Lopes da Silva (Bibliotecária - Diretora do SIBI)\n '
-              '\n Endereço: Av. José de Sá Maniçoba, s/n, Centro, Petrolina-PE, CEP 56304-917 \n '
-              '\n Telefone: (87) 21016889 \n  E-mail: biblioteca@univasf.edu.br \n'
-              '\n EquipeSetor de Processamento TécnicoBibliotecária / Setor de Processamento Técnico Adriana Santos Magalhães. \n'
-              '\n Setor de Referência e Informação  Bibliotecário / Setor de Referência'' Lucídio Lopes de Alencar. \n'
-              '\n Assistente de Apoio ao SIBI  Evani Nogueira Pereira \n '
-              '\n Assistente em Administração/ Assistente de Apoio ao SIBI Silvia Regina de Souza Mendes.\n'
-              '\n Atendentes:\n  Lis Maria Barros Conceição, Flaviana Coelho Macedo de Brito, Thailyne da Fonseca Clemente,  Ithor Iandersin Garcia de Oliveira Deodato \n'
+      appBar: 
+        AppBar(
+          backgroundColor: Colors.blue[400]
+        ),
+      body: 
+        SingleChildScrollView(
+          padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+          child: 
+            Column(
+              children: [        
+                Text(
+                  'Biblioteca Campus Petrolina\n',
+                  textAlign: TextAlign.center,
+                  style: 
+                    TextStyle(
+                      // color: Colors.amber,
+                      color: Color.fromARGB(255, 253, 152, 2),
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                    )
+                ),
+                
+                Container(
+                  child: 
+                    Image.asset(
+                      'imagem/campuspetrolina.png'
+                    ),
+                ),
+                
+                Text(
+                  '\nResponsável',
+                  textAlign: TextAlign.left,
+                  style: 
+                    TextStyle(
+                      fontSize: 21,
+                      fontWeight: FontWeight.bold,
+                    )
+                ),
+                Text(
+                  'Ana Paula Lopes da Silva (Bibliotecária - Diretora do SIBI)',
+                  textAlign: TextAlign.center,
+                  textDirection: TextDirection.ltr,
+                  style: 
+                    TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500
+                    )
+                ),
 
-      , style: TextStyle( fontSize: 15)),
-        ],
-      ),)
+                Text(
+                  '\nEndereço',
+                  textAlign: TextAlign.left,
+                  textDirection: TextDirection.ltr,
+                  style: 
+                    TextStyle(
+                      fontSize: 21,
+                      fontWeight: FontWeight.bold,
+                    )
+                ),    
+                Text(
+                  'Av. José de Sá Maniçoba, s/n, Centro, Petrolina-PE, CEP 56304-917',
+                  textAlign: TextAlign.center,
+                  style: 
+                    TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500
+                    )
+                ),
+                
+                Text(
+                  '\nTelefone',
+                  textAlign: TextAlign.left,
+                  textDirection: TextDirection.ltr,
+                  style: 
+                    TextStyle(
+                      fontSize: 21,
+                      fontWeight: FontWeight.bold,
+                    )
+                ),   
+                Text(
+                  '(87)2101-6889',
+                  textAlign: TextAlign.center,
+                  style: 
+                    TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500
+                    )
+                ),
+
+                Text(
+                  '\nE-mail',
+                  textAlign: TextAlign.left,
+                  textDirection: TextDirection.ltr,
+                  style: 
+                    TextStyle(
+                      fontSize: 21,
+                      fontWeight: FontWeight.bold,
+                    )
+                ),     
+                Text(
+                  'biblioteca@univasf.edu.br',
+                  textAlign: TextAlign.center,
+                  style: 
+                    TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500
+                    )
+                ),
+
+                Text(
+                  '\nSetor de Processamento Técnico ',
+                  textAlign: TextAlign.left,
+                  textDirection: TextDirection.ltr,
+                  style: 
+                    TextStyle(
+                      fontSize: 21,
+                      fontWeight: FontWeight.bold,
+                    )
+                ),     
+                Text(
+                  'Adriana Santos Magalhães (Bibliotecária)',
+                  textAlign: TextAlign.center,
+                  style: 
+                    TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500
+                    )
+                ),
+
+                Text(
+                  '\nSetor de Referência e Informação',
+                  textAlign: TextAlign.left,
+                  textDirection: TextDirection.ltr,
+                  style: 
+                    TextStyle(
+                      fontSize: 21,
+                      fontWeight: FontWeight.bold,
+                    )
+                ),     
+                Text(
+                  'Lucídio Lopes de Alencar (Bibliotecário)',
+                  textAlign: TextAlign.center,
+                  style: 
+                    TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500
+                    )
+                ),
+
+                Text(
+                  '\nAssistente de Apoio ao SIBI',
+                  textAlign: TextAlign.left,
+                  textDirection: TextDirection.ltr,
+                  style: 
+                    TextStyle(
+                      fontSize: 21,
+                      fontWeight: FontWeight.bold,
+                    )
+                ),     
+                Text(
+                  'Evani Nogueira Pereira',
+                  textAlign: TextAlign.center,
+                  style: 
+                    TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500
+                    )
+                ),
+
+                Text(
+                  '\nAssistente em Administração e Apoio ao SIBI',
+                  textAlign: TextAlign.center,
+                  textDirection: TextDirection.ltr,
+                  style: 
+                    TextStyle(
+                      fontSize: 21,
+                      fontWeight: FontWeight.bold,
+                    )
+                ),     
+                Text(
+                  'Silvia Regina de Souza Mendes',
+                  textAlign: TextAlign.center,
+                  style: 
+                    TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500
+                    )
+                ),
+
+                Text(
+                  '\nAtendentes',
+                  textAlign: TextAlign.left,
+                  textDirection: TextDirection.ltr,
+                  style: 
+                    TextStyle(
+                      fontSize: 21,
+                      fontWeight: FontWeight.bold,
+                    )
+                ),     
+                Text(
+                  'Lis Maria Barros Conceição\n'
+                  'Flaviana Coelho Macedo de Brito\n'
+                  'Thailyne da Fonseca Clemente\n'
+                  'Ithor Iandersin Garcia de Oliveira Deodato',
+                  textAlign: TextAlign.center,
+                  style: 
+                    TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500
+                    )
+                ),
+
+                Text(
+                  '\nBiblioteca do Hospital Universitário (HU)',
+                  textAlign: TextAlign.center,
+                  textDirection: TextDirection.ltr,
+                  style: 
+                    TextStyle(
+                      fontSize: 21,
+                      fontWeight: FontWeight.bold,
+                    )
+                ),     
+                Text(
+                  'Fabio Oliveira Lima (Bibliotecário)',
+                  textAlign: TextAlign.center,
+                  style: 
+                    TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500
+                    )
+                ),
+              ],
+            ),
+        )
 
     );
   }
