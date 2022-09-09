@@ -18,10 +18,10 @@ class _HomeState extends State<Home> {
     return Scaffold(
       backgroundColor: Colors.white,
 
-      // Menu Hambuguer
       appBar: AppBar(
         backgroundColor: Colors.blue,
       ),
+      
       body: IndexedStack(
         index: _opcaoselecionada,
         children: <Widget>[
@@ -31,7 +31,9 @@ class _HomeState extends State<Home> {
           telabiblioteca(),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
+      
+      bottomNavigationBar: 
+        BottomNavigationBar(
           selectedFontSize: 0,
           iconSize: 35,
           backgroundColor: Colors.blue,
@@ -44,14 +46,20 @@ class _HomeState extends State<Home> {
           items: [
             BottomNavigationBarItem(
                 icon: Icon(color: Colors.white, Icons.dehaze_outlined),
-                label: ''),
+                label: ''
+            ),
+            
             BottomNavigationBarItem(
                 icon: Icon(color: Colors.white, Icons.home_outlined),
-                label: ''),
+                label: ''
+            ),
+            
             BottomNavigationBarItem(
                 icon: Icon(color: Colors.white, Icons.location_on_outlined),
-                label: ''),
-          ]),
+                label: ''
+            ),
+          ]
+        ),
     );
   }
 }
