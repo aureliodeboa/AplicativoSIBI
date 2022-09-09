@@ -15,17 +15,125 @@ class _teladecienciasagrariasState extends State<teladecienciasagrarias> {
         padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
         child: Column(
         children: [
-          Text('Biblioteca Campus Ciências Agrárias\n',textAlign: TextAlign.center,style: TextStyle(color: Colors.amber, fontSize: 30,)),
-          Container(child: Image.asset('imagem/campuscienciasagrarias.png'),),
-          Text('\nAbrangência do acervo: Ciências Biológicas,  Engenharia Agronômica, Medicina Veterinária e Zootecnia. \n'
+            Text(
+              'Biblioteca Campus Ciências Agrárias\n',
+              textAlign: TextAlign.center,
+              style: 
+                TextStyle(
+                  // color: Colors.amber,
+                  color: Color.fromARGB(255, 253, 152, 2),
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                )
+            ),
+            
+            Container(
+              child: 
+                Image.asset(
+                  'imagem/campuscienciasagrarias.png'
+                ),
+            ),
+            
+            Text(
+              '\nResponsável',
+              textAlign: TextAlign.center,
+              style: 
+                TextStyle(
+                  fontSize: 21,
+                  fontWeight: FontWeight.bold,
+                )
+            ),
+            Text(
+              'Andressa Lais Machado de Matos (Bibliotecária)',
+              textAlign: TextAlign.center,
+              textDirection: TextDirection.ltr,
+              style: 
+                TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500
+                )
+            ),
 
-              '\nResponsável: Andressa Lais Machado de Matos (Bibliotecária - Biblioteca de Ciências Agrárias)\n'
-              '\nAtendentes: Rozangela Cristina Nogueira,Lucineide Nunes\n'
-              '\nEndereço: Rodovia BR 407, Km 12 - Lote 543 - Projeto de Irrigação Senador Nilo Coelho, s/n C1. Petrolina-PE,\n CEP: 56300-990. \n'
-              '\nTelefone: (87) 21014813\n'
-              '\nE-mail: biblioteca.fazenda@univasf.edu.br\n'
-             ,style: TextStyle( fontSize: 15)),
-        ],
+            Text(
+              '\nEndereço',
+              textAlign: TextAlign.center,
+              textDirection: TextDirection.ltr,
+              style: 
+                TextStyle(
+                  fontSize: 21,
+                  fontWeight: FontWeight.bold,
+                )
+            ),    
+            Text(
+              'Rod. BR 407, Km 12, Lote 543, Projeto de Irrigação Senador Nilo Coelho, s/n C1, Petrolina-PE, CEP: 56300-990',
+              textAlign: TextAlign.center,
+              style: 
+                TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500
+                )
+            ),
+            
+            Text(
+              '\nTelefone',
+              textAlign: TextAlign.center,
+              textDirection: TextDirection.ltr,
+              style: 
+                TextStyle(
+                  fontSize: 21,
+                  fontWeight: FontWeight.bold,
+                )
+            ),   
+            Text(
+              ' (87)2101-4813',
+              textAlign: TextAlign.center,
+              style: 
+                TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500
+                )
+            ),
+
+            Text(
+              '\nE-mail',
+              textAlign: TextAlign.center,
+              textDirection: TextDirection.ltr,
+              style: 
+                TextStyle(
+                  fontSize: 21,
+                  fontWeight: FontWeight.bold,
+                )
+            ),     
+            Text(
+              'biblioteca.fazenda@univasf.edu.br',
+              textAlign: TextAlign.center,
+              style: 
+                TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500
+                )
+            ),
+            Text(
+              '\nAtendentes',
+              textAlign: TextAlign.center,
+              textDirection: TextDirection.ltr,
+              style: 
+                TextStyle(
+                  fontSize: 21,
+                  fontWeight: FontWeight.bold,
+                )
+            ),     
+            Text(
+              'Rozangela Cristina Nogueira\n'
+              'Lucineide Nunes',
+              textAlign: TextAlign.center,
+              style: 
+                TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500
+                )
+            ),
+          ],
       ),),
 
     );

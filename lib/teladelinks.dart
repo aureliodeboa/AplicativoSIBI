@@ -22,20 +22,21 @@ class teladelinks extends StatefulWidget {
 
 class _teladelinksState extends State<teladelinks> {
   void launchExternalWebsite(String url) async {
-    var urlUri= Uri.parse(url);
-    if(await canLaunchUrl(urlUri)){
+    var urlUri = Uri.parse(url);
+    if (await canLaunchUrl(urlUri)) {
       await launchUrl(urlUri, mode: LaunchMode.externalApplication);
-    }else {
+    } else {
       throw 'could not lanch $urlUri';
     }
   }
- double _L=500,_H=60;
+
+  double _L = 500, _H = 60;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: SingleChildScrollView(
-          padding:  EdgeInsets.fromLTRB(10, 25, 10, 20),
+          padding: EdgeInsets.fromLTRB(10, 25, 10, 20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment
                 .spaceBetween, // centraliza para ocupar so o tamanho necessario
@@ -43,6 +44,19 @@ class _teladelinksState extends State<teladelinks> {
 
             children: [
               // Image.asset('imagem/logosibiunivasf.jpg'),
+              Text(
+                'MENU',
+                textAlign: TextAlign.center,
+                style: 
+                  TextStyle(
+                    // color: Colors.amber,
+                    color: Color.fromARGB(255, 253, 152, 2),
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    decoration: TextDecoration.underline,
+                  )
+              ),
+              
               SizedBox(
                 height: 20,
               ),
@@ -53,75 +67,68 @@ class _teladelinksState extends State<teladelinks> {
                 },
                 child: Row(
                   children: [
-                    
                     Icon(
                       Icons.person_outline,
                       size: 30.0,
                     ),
-                    
                     Text(
-                      ' Guia do Usuário', 
+                      ' Guia do Usuário',
                       style: const TextStyle(fontSize: 20),
                     ),
                   ],
                 ),
                 style: ButtonStyle(
                     shape: MaterialStateProperty.resolveWith((states) {
-                      return RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      );
-                    }), // Muda as Bordas
+                  return RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  );
+                }), // Muda as Bordas
                     fixedSize:
-                    MaterialStateProperty.resolveWith<Size?>((states) {
-                      return Size(400, 70);
-                    }), //tamanho
+                        MaterialStateProperty.resolveWith<Size?>((states) {
+                  return Size(400, 70);
+                }), //tamanho
                     backgroundColor:
-                    MaterialStateProperty.resolveWith<Color?>((states) {
-                      if (states.contains(MaterialState.pressed)) {
-                        return Colors.grey;
-                      }
-                    }) //cor de fundo
-                ),
+                        MaterialStateProperty.resolveWith<Color?>((states) {
+                  if (states.contains(MaterialState.pressed)) {
+                    return Colors.grey;
+                  }
+                }) //cor de fundo
+                    ),
               ),
               SizedBox(
                 height: 20,
               ),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => telapergamun()));
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => telapergamun()));
                 },
                 child: Row(
                   children: [
-                    
-                    Icon(
-                      Icons.search_outlined,
-                      size: 30.0
-                    ),
-                    
+                    Icon(Icons.search_outlined, size: 30.0),
                     Text(
-                      ' Como Consultar o Pergamum?', 
+                      ' Como Consultar o Pergamum?',
                       style: const TextStyle(fontSize: 20),
                     )
                   ],
                 ),
                 style: ButtonStyle(
                     shape: MaterialStateProperty.resolveWith((states) {
-                      return RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      );
-                    }), // Muda as Bordas
+                  return RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  );
+                }), // Muda as Bordas
                     fixedSize:
-                    MaterialStateProperty.resolveWith<Size?>((states) {
-                      return Size(400, 70);
-                    }), //tamanho
+                        MaterialStateProperty.resolveWith<Size?>((states) {
+                  return Size(400, 70);
+                }), //tamanho
                     backgroundColor:
-                    MaterialStateProperty.resolveWith<Color?>((states) {
-                      if (states.contains(MaterialState.pressed)) {
-                        return Colors.grey;
-                      }
-                    }) //cor de fundo
-                ),
+                        MaterialStateProperty.resolveWith<Color?>((states) {
+                  if (states.contains(MaterialState.pressed)) {
+                    return Colors.grey;
+                  }
+                }) //cor de fundo
+                    ),
               ),
               SizedBox(
                 height: 20,
@@ -129,40 +136,38 @@ class _teladelinksState extends State<teladelinks> {
 
               ElevatedButton(
                 onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => redesociais()));
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => redesociais()));
                 },
                 child: Row(
                   children: [
-                    
                     Icon(
                       Icons.polyline,
                       size: 30.0,
                     ),
-                    
                     Text(
-                      ' Redes Sociais', 
+                      ' Redes Sociais',
                       style: const TextStyle(fontSize: 20),
                     ),
                   ],
                 ),
                 style: ButtonStyle(
                     shape: MaterialStateProperty.resolveWith((states) {
-                      return RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      );
-                    }), // Muda as Bordas
+                  return RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  );
+                }), // Muda as Bordas
                     fixedSize:
-                    MaterialStateProperty.resolveWith<Size?>((states) {
-                      return Size(400, 70);
-                    }), //tamanho
+                        MaterialStateProperty.resolveWith<Size?>((states) {
+                  return Size(400, 70);
+                }), //tamanho
                     backgroundColor:
-                    MaterialStateProperty.resolveWith<Color?>((states) {
-                      if (states.contains(MaterialState.pressed)) {
-                        return Colors.grey;
-                      }
-                    }) //cor de fundo
-                ),
+                        MaterialStateProperty.resolveWith<Color?>((states) {
+                  if (states.contains(MaterialState.pressed)) {
+                    return Colors.grey;
+                  }
+                }) //cor de fundo
+                    ),
               ),
               SizedBox(
                 height: 20,
@@ -175,35 +180,33 @@ class _teladelinksState extends State<teladelinks> {
                 },
                 child: Row(
                   children: [
-                    
                     Icon(
                       Icons.collections_bookmark_outlined,
                       size: 30.0,
                     ),
-                    
                     Text(
-                      ' Documentos SIBI', 
+                      ' Documentos SIBI',
                       style: const TextStyle(fontSize: 20),
                     ),
                   ],
                 ),
                 style: ButtonStyle(
                     shape: MaterialStateProperty.resolveWith((states) {
-                      return RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      );
-                    }), // Muda as Bordas
+                  return RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  );
+                }), // Muda as Bordas
                     fixedSize:
-                    MaterialStateProperty.resolveWith<Size?>((states) {
-                      return Size(400, 70);
-                    }), //tamanho
+                        MaterialStateProperty.resolveWith<Size?>((states) {
+                  return Size(400, 70);
+                }), //tamanho
                     backgroundColor:
-                    MaterialStateProperty.resolveWith<Color?>((states) {
-                      if (states.contains(MaterialState.pressed)) {
-                        return Colors.grey;
-                      }
-                    }) //cor de fundo
-                ),
+                        MaterialStateProperty.resolveWith<Color?>((states) {
+                  if (states.contains(MaterialState.pressed)) {
+                    return Colors.grey;
+                  }
+                }) //cor de fundo
+                    ),
               ),
               SizedBox(
                 height: 20,
@@ -214,34 +217,32 @@ class _teladelinksState extends State<teladelinks> {
                       builder: (context) => telacatolgrafica()));
                 },
                 child: Row(children: [
-                  
                   Icon(
                     Icons.drafts,
                     size: 30.0,
                   ),
-                  
                   Text(
-                    ' Ficha Catalográfica', 
+                    ' Ficha Catalográfica',
                     style: const TextStyle(fontSize: 20),
                   )
                 ]),
                 style: ButtonStyle(
                     shape: MaterialStateProperty.resolveWith((states) {
-                      return RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      );
-                    }), // Muda as Bordas
+                  return RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  );
+                }), // Muda as Bordas
                     fixedSize:
-                    MaterialStateProperty.resolveWith<Size?>((states) {
-                      return Size(400, 70);
-                    }), //tamanho
+                        MaterialStateProperty.resolveWith<Size?>((states) {
+                  return Size(400, 70);
+                }), //tamanho
                     backgroundColor:
-                    MaterialStateProperty.resolveWith<Color?>((states) {
-                      if (states.contains(MaterialState.pressed)) {
-                        return Colors.grey;
-                      }
-                    }) //cor de fundo
-                ),
+                        MaterialStateProperty.resolveWith<Color?>((states) {
+                  if (states.contains(MaterialState.pressed)) {
+                    return Colors.grey;
+                  }
+                }) //cor de fundo
+                    ),
               ),
               SizedBox(
                 height: 20,
@@ -253,35 +254,33 @@ class _teladelinksState extends State<teladelinks> {
                 },
                 child: Row(
                   children: [
-                    
                     Icon(
                       Icons.check,
                       size: 30.0,
                     ),
-                    
                     Text(
-                      ' Declaração Nada Consta', 
+                      ' Declaração Nada Consta',
                       style: const TextStyle(fontSize: 20),
                     )
                   ],
                 ),
                 style: ButtonStyle(
                     shape: MaterialStateProperty.resolveWith((states) {
-                      return RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      );
-                    }), // Muda as Bordas
+                  return RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  );
+                }), // Muda as Bordas
                     fixedSize:
-                    MaterialStateProperty.resolveWith<Size?>((states) {
-                      return Size(400, 70);
-                    }), //tamanho
+                        MaterialStateProperty.resolveWith<Size?>((states) {
+                  return Size(400, 70);
+                }), //tamanho
                     backgroundColor:
-                    MaterialStateProperty.resolveWith<Color?>((states) {
-                      if (states.contains(MaterialState.pressed)) {
-                        return Colors.grey;
-                      }
-                    }) //cor de fundo
-                ),
+                        MaterialStateProperty.resolveWith<Color?>((states) {
+                  if (states.contains(MaterialState.pressed)) {
+                    return Colors.grey;
+                  }
+                }) //cor de fundo
+                    ),
               ),
               SizedBox(
                 height: 20,
@@ -293,72 +292,69 @@ class _teladelinksState extends State<teladelinks> {
                 },
                 child: Row(
                   children: [
-                    
                     Icon(
                       Icons.border_color_outlined,
                       size: 30.0,
                     ),
-                    
                     Text(
-                      ' Manual de Normalização', 
+                      ' Manual de Normalização',
                       style: const TextStyle(fontSize: 20),
                     ),
                   ],
                 ),
                 style: ButtonStyle(
                     shape: MaterialStateProperty.resolveWith((states) {
-                      return RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      );
-                    }), // Muda as Bordas
+                  return RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  );
+                }), // Muda as Bordas
                     fixedSize:
-                    MaterialStateProperty.resolveWith<Size?>((states) {
-                      return Size(400, 70);
-                    }), //tamanho
+                        MaterialStateProperty.resolveWith<Size?>((states) {
+                  return Size(400, 70);
+                }), //tamanho
                     backgroundColor:
-                    MaterialStateProperty.resolveWith<Color?>((states) {
-                      if (states.contains(MaterialState.pressed)) {
-                        return Colors.grey;
-                      }
-                    }) //cor de fundo
-                ),
+                        MaterialStateProperty.resolveWith<Color?>((states) {
+                  if (states.contains(MaterialState.pressed)) {
+                    return Colors.grey;
+                  }
+                }) //cor de fundo
+                    ),
               ),
               SizedBox(
                 height: 20,
               ),
               ElevatedButton(
-                onPressed: () { Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => telatutoriais()));
+                onPressed: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => telatutoriais()));
                 },
                 child: Row(children: [
-                  
                   Icon(
                     Icons.school,
                     size: 30.0,
                   ),
-                  
                   Text(
-                    ' Tutoriais', 
+                    ' Tutoriais',
                     style: const TextStyle(fontSize: 20),
                   )
                 ]),
                 style: ButtonStyle(
                     shape: MaterialStateProperty.resolveWith((states) {
-                      return RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      );
-                    }), // Muda as Bordas
+                  return RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  );
+                }), // Muda as Bordas
                     fixedSize:
-                    MaterialStateProperty.resolveWith<Size?>((states) {
-                      return Size(400, 70);
-                    }), //tamanho
+                        MaterialStateProperty.resolveWith<Size?>((states) {
+                  return Size(400, 70);
+                }), //tamanho
                     backgroundColor:
-                    MaterialStateProperty.resolveWith<Color?>((states) {
-                      if (states.contains(MaterialState.pressed)) {
-                        return Colors.grey;
-                      }
-                    }) //cor de fundo
-                ),
+                        MaterialStateProperty.resolveWith<Color?>((states) {
+                  if (states.contains(MaterialState.pressed)) {
+                    return Colors.grey;
+                  }
+                }) //cor de fundo
+                    ),
               ),
               SizedBox(
                 height: 20,
@@ -370,45 +366,42 @@ class _teladelinksState extends State<teladelinks> {
                 },
                 child: Row(
                   children: [
-                    
                     Icon(
                       Icons.touch_app_outlined,
                       size: 30.0,
                     ),
-                    
-                    Text(' Reserva e Renovação de Livros', 
-                        style: const TextStyle(fontSize: 20),
+                    Text(
+                      ' Reserva e Renovação de Livros',
+                      style: const TextStyle(fontSize: 20),
                     )
                   ],
                 ),
                 style: ButtonStyle(
                     shape: MaterialStateProperty.resolveWith((states) {
-                      return RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      );
-                    }), // Muda as Bordas
+                  return RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  );
+                }), // Muda as Bordas
                     fixedSize:
-                    MaterialStateProperty.resolveWith<Size?>((states) {
-                      return Size(400, 70);
-                    }), //tamanho
+                        MaterialStateProperty.resolveWith<Size?>((states) {
+                  return Size(400, 70);
+                }), //tamanho
                     backgroundColor:
-                    MaterialStateProperty.resolveWith<Color?>((states) {
-                      if (states.contains(MaterialState.pressed)) {
-                        return Colors.grey;
-                      }
-                    }) //cor de fundo
-                ),
+                        MaterialStateProperty.resolveWith<Color?>((states) {
+                  if (states.contains(MaterialState.pressed)) {
+                    return Colors.grey;
+                  }
+                }) //cor de fundo
+                    ),
               ),
               SizedBox(
                 height: 20,
               ),
-
             ],
           ),
         ),
       ),
     );
-
   }
 }
 /* Center(

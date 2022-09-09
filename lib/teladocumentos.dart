@@ -12,165 +12,282 @@ class teladocumentos extends StatefulWidget {
 
 class _teladocumentosState extends State<teladocumentos> {
   void launchExternalWebsite(String url) async {
-    var urlUri= Uri.parse(url);
-    if(await canLaunchUrl(urlUri)){
+    var urlUri = Uri.parse(url);
+    if (await canLaunchUrl(urlUri)) {
       await launchUrl(urlUri, mode: LaunchMode.externalApplication);
-    }else {
+    } else {
       throw 'could not lanch $urlUri';
     }
   }
-  @override
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title:Text('Documentos SIBI'),backgroundColor: Colors.blue),
+      appBar:
+          AppBar(title: Text('Documentos SIBI'), backgroundColor: Colors.blue),
       body: SingleChildScrollView(
         padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
         child: Center(
-
           child: Column(
-
             children: [
               //SizedBox(height: 20),
-              Text("A PRESENTE SECÇÃO REÚNE TODOS OS DOCUMENTOS IMPORTANTES DISPONÍVEIS NO SIBI\n",style: TextStyle(fontSize: 18)),
-              Text(" \n Regulamento -Utilização, circulação e política do desenvolvimento do acervo."),
+              Text(
+                  "A Presente secção reúne todos os documentos importantes disponibilizados pelo SIBI\n",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
+              Text(
+                  " \n Regulamento -Utilização, circulação e política do desenvolvimento do acervo.",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
               TextButton.icon(
-                icon:Container(child: Image.asset('imagem/icones/pdf.png',width: 20,color: Colors.red[700], ),),
-                label: Text(' Regulamento '),
+                icon: Container(
+                  child: Image.asset(
+                    'imagem/icones/pdf.png',
+                    width: 20,
+                    color: Colors.red[700],
+                  ),
+                ),
+                label: Text(' Regulamento ',
+                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.blue[400]),
+                ),
                 onPressed: () => setState(() {
-                  launchExternalWebsite("https://portais.univasf.edu.br/sibi/regulamento-sibi.pdf");
-
-                }
-                ),),
+                  launchExternalWebsite(
+                      "https://portais.univasf.edu.br/sibi/regulamento-sibi.pdf");
+                }),
+              ),
               SizedBox(height: 20),
 
-
-              Text("Plano de Contingência SIBI - Tem o objetivo de identificar possíveis riscos ao acervo, pessoal, estrutura física e serviços prestados pelo Sistema de Bibliotecas, indicando medidas para prevenir e conter casos de intercorrências."),
+              Text(
+                  "Plano de Contingência SIBI - Tem o objetivo de identificar possíveis riscos ao acervo, pessoal, estrutura física e serviços prestados pelo Sistema de Bibliotecas, indicando medidas para prevenir e conter casos de intercorrências.",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
               TextButton.icon(
-                icon:Container(child: Image.asset('imagem/icones/pdf.png',width: 20,color: Colors.red[700], ),),
-                label: Text('Plano de Contingência SIBI '),
+                icon: Container(
+                  child: Image.asset(
+                    'imagem/icones/pdf.png',
+                    width: 20,
+                    color: Colors.red[700],
+                  ),
+                ),
+                label: Text('Plano de Contingência SIBI ',
+                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.blue[400]),
+                ),
                 onPressed: () => setState(() {
-                  launchExternalWebsite("https://portais.univasf.edu.br/sibi/plano-de-contingencia-sibi.pdf");
-
-                }
-                ),),
+                  launchExternalWebsite(
+                      "https://portais.univasf.edu.br/sibi/plano-de-contingencia-sibi.pdf");
+                }),
+              ),
               SizedBox(height: 20),
 
-              Text("Guia de fontes de informação digitais - Traz informações sobre editoras que oferecem e-books para download gratuito e conteúdos de bases de dados, normas técnicas, bibliotecas digitais e periódicos de acesso aberto."),
+              Text(
+                  "Guia de fontes de informação digitais - Traz informações sobre editoras que oferecem e-books para download gratuito e conteúdos de bases de dados, normas técnicas, bibliotecas digitais e periódicos de acesso aberto.",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
               TextButton.icon(
-                icon:Container(child: Image.asset('imagem/icones/pdf.png',width: 20,color: Colors.red[700], ),),
-                label: Text('Guia de fontes de informação digitais'),
+                icon: Container(
+                  child: Image.asset(
+                    'imagem/icones/pdf.png',
+                    width: 20,
+                    color: Colors.red[700],
+                  ),
+                ),
+                label: Text('Guia de fontes de informação digitais',
+                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.blue[400]),
+                ),
                 onPressed: () => setState(() {
-                  launchExternalWebsite("https://portais.univasf.edu.br/sibi/guia-de-fontes-de-informacao-digitais");
-
-                }
-                ),),
+                  launchExternalWebsite(
+                      "https://portais.univasf.edu.br/sibi/guia-de-fontes-de-informacao-digitais");
+                }),
+              ),
               SizedBox(height: 20),
 
-              Text("Cartilha - Técnicas de Utilização do Sistema Pergamum - Descrição das formas de pesquisa e acesso às obras do catálogo online das bibliotecas e demais serviços disponíveis aos usuários via sistema Pergamum."),
+              Text(
+                  "Cartilha - Técnicas de Utilização do Sistema Pergamum - Descrição das formas de pesquisa e acesso às obras do catálogo online das bibliotecas e demais serviços disponíveis aos usuários via sistema Pergamum.",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
               TextButton.icon(
-                icon:Container(child: Image.asset('imagem/icones/pdf.png',width: 20,color: Colors.red[700], ),),
-                label: Text('Cartilha'),
+                icon: Container(
+                  child: Image.asset(
+                    'imagem/icones/pdf.png',
+                    width: 20,
+                    color: Colors.red[700],
+                  ),
+                ),
+                label: Text('Cartilha',
+                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.blue[400]),
+                ),
                 onPressed: () => setState(() {
-                  launchExternalWebsite("https://portais.univasf.edu.br/sibi/cartilha-tecnicas-de-utilizacao-do-sistema-pergamum.pdf");
-
-                }
-                ),),
+                  launchExternalWebsite(
+                      "https://portais.univasf.edu.br/sibi/cartilha-tecnicas-de-utilizacao-do-sistema-pergamum.pdf");
+                }),
+              ),
               SizedBox(height: 20),
 
-              Text("Instruções Gerais - Utilização das salas de estudo em grupo para todas as bibliotecas."),
+              Text(
+                  "Instruções Gerais - Utilização das salas de estudo em grupo para todas as bibliotecas.",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
               TextButton.icon(
-                icon:Container(child: Image.asset('imagem/icones/pdf.png',width: 20,color: Colors.red[700], ),),
-                label: Text('Instruções Gerais '),
+                icon: Container(
+                  child: Image.asset(
+                    'imagem/icones/pdf.png',
+                    width: 20,
+                    color: Colors.red[700],
+                  ),
+                ),
+                label: Text('Instruções Gerais ',
+                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.blue[400]),
+                ),
                 onPressed: () => setState(() {
-                  launchExternalWebsite("https://portais.univasf.edu.br/sibi/instrucoes-para-uso-das-salas-de-estudo-em-grupo.pdf");
-
-                }
-                ),),
+                  launchExternalWebsite(
+                      "https://portais.univasf.edu.br/sibi/instrucoes-para-uso-das-salas-de-estudo-em-grupo.pdf");
+                }),
+              ),
               SizedBox(height: 20),
 
-              Text("Carta de Doação - O SIBI recebe doações de material bibliográfico que sejam de interesse para a comunidade acadêmica. A incorporação ao acervo de materiais doados segue os critérios da Política de Desenvolvimento de Acervo. Ao SIBI resguarda-se a autonomia para selecionar o material doado e incorporá-lo ao acervo ou encaminhá-lo a outras instituições. "),
+              Text(
+                  "Carta de Doação - O SIBI recebe doações de material bibliográfico que sejam de interesse para a comunidade acadêmica. A incorporação ao acervo de materiais doados segue os critérios da Política de Desenvolvimento de Acervo. Ao SIBI resguarda-se a autonomia para selecionar o material doado e incorporá-lo ao acervo ou encaminhá-lo a outras instituições. ",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
               TextButton.icon(
-                icon:Container(child: Image.asset('imagem/icones/doc.png',width: 20 ),),
-                label: Text('Carta de Doação doc'),
+                icon: Container(
+                  child: Image.asset('imagem/icones/doc.png', width: 20),
+                ),
+                label: Text('Carta de Doação.doc',
+                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.blue[400]),
+                ),
                 onPressed: () => setState(() {
-                  launchExternalWebsite("https://portais.univasf.edu.br/sibi/informacao-ao-usuario/carta-de-doacao.doc/@@download/file/CARTA%20DE%20DOA%C3%87%C3%83O.doc");
-
-                }
-                ),),
+                  launchExternalWebsite(
+                      "https://portais.univasf.edu.br/sibi/informacao-ao-usuario/carta-de-doacao.doc/@@download/file/CARTA%20DE%20DOA%C3%87%C3%83O.doc");
+                }),
+              ),
               SizedBox(height: 20),
 
-              Text("Carta de Serviço SIBI - Diversos setores da Univasf estiveram empenhados em elaborar suas cartas de serviço, em metodologia conduzida pela Diretoria de Desenvolvimento Institucional - DDI, da Pró-reitoria de Planejamento e Desenvolvimento Institucional - Propladi. Esse processo envolveu, dentre outras etapas, a constituição de equipes setoriais de trabalho, a sistematização de informações referentes aos serviços executados, a análise de normas de procedimentos, a redação das versões iniciais dos documentos setoriais, a submissão desses últimos ao Comitê de Aprovação e Divulgação, a realização de eventuais ajustes e a diagramação das versões finais. "),
+              Text(
+                  "Carta de Serviço SIBI - Diversos setores da Univasf estiveram empenhados em elaborar suas cartas de serviço, em metodologia conduzida pela Diretoria de Desenvolvimento Institucional - DDI, da Pró-reitoria de Planejamento e Desenvolvimento Institucional - Propladi. Esse processo envolveu, dentre outras etapas, a constituição de equipes setoriais de trabalho, a sistematização de informações referentes aos serviços executados, a análise de normas de procedimentos, a redação das versões iniciais dos documentos setoriais, a submissão desses últimos ao Comitê de Aprovação e Divulgação, a realização de eventuais ajustes e a diagramação das versões finais. ",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
               TextButton.icon(
-                icon:Container(child: Image.asset('imagem/icones/pdf.png',width: 20,color: Colors.red[700],),),
-                label: Text('Carta de Serviço '),
+                icon: Container(
+                  child: Image.asset(
+                    'imagem/icones/pdf.png',
+                    width: 20,
+                    color: Colors.red[700],
+                  ),
+                ),
+                label: Text('Carta de Serviço ',
+                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.blue[400]),
+                ),
                 onPressed: () => setState(() {
-                  launchExternalWebsite("https://portais.univasf.edu.br/sibi/informacao-ao-usuario/carta-de-servico-sibi.pdf/@@download/file/carta_de_servicos_sibi.pdf");
-
-                }
-                ),),
+                  launchExternalWebsite(
+                      "https://portais.univasf.edu.br/sibi/informacao-ao-usuario/carta-de-servico-sibi.pdf/@@download/file/carta_de_servicos_sibi.pdf");
+                }),
+              ),
               SizedBox(height: 20),
 
-              Text("Como localizar os livros nas estantes- Para melhor uso do acervo das Bibliotecas do SIBI, disponibilizamos instruções de como localizar o material nas prateleiras. É fácil, simples e útil."),
+              Text(
+                  "Como localizar os livros nas estantes- Para melhor uso do acervo das Bibliotecas do SIBI, disponibilizamos instruções de como localizar o material nas prateleiras. É fácil, simples e útil.",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
               TextButton.icon(
-                icon:Container(child: Image.asset('imagem/icones/pdf.png',width: 20,color: Colors.red[700], ),),
-                label: Text('Como localizar os livros nas estantes '),
+                icon: Container(
+                  child: Image.asset(
+                    'imagem/icones/pdf.png',
+                    width: 20,
+                    color: Colors.red[700],
+                  ),
+                ),
+                label: Text('Como localizar os livros nas estantes ',
+                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.blue[400]),
+                ),
                 onPressed: () => setState(() {
-                  launchExternalWebsite("https://portais.univasf.edu.br/sibi/informacao-ao-usuario/como-localizar-os-livros-nas-estantes.pdf/@@download/file/Como%20localizar%20os%20Livros%20nas%20estantes.pdf");
-
-                }
-                ),),
+                  launchExternalWebsite(
+                      "https://portais.univasf.edu.br/sibi/informacao-ao-usuario/como-localizar-os-livros-nas-estantes.pdf/@@download/file/Como%20localizar%20os%20Livros%20nas%20estantes.pdf");
+                }),
+              ),
               SizedBox(height: 20),
 
-              Text("Acessibilidade e inclusão nas bibliotecas - Ações e projetos desenvolvidos pelo Sistema de Bibliotecas para possibilitar acessibilidade aos seus usuários."),
+              Text(
+                  "Acessibilidade e inclusão nas bibliotecas - Ações e projetos desenvolvidos pelo Sistema de Bibliotecas para possibilitar acessibilidade aos seus usuários.",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
               TextButton.icon(
-                icon:Container(child: Image.asset('imagem/icones/pdf.png',width: 20,color: Colors.red[700], ),),
-                label: Text('Acessibilidade e inclusão nas bibliotecas'),
+                icon: Container(
+                  child: Image.asset(
+                    'imagem/icones/pdf.png',
+                    width: 20,
+                    color: Colors.red[700],
+                  ),
+                ),
+                label: Text('Acessibilidade e inclusão nas bibliotecas',
+                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.blue[400]),
+                ),
                 onPressed: () => setState(() {
-                  launchExternalWebsite("https://portais.univasf.edu.br/sibi/acessibilidade-e-inclusao-nas-bibliotecas");
-
-                }
-                ),),
+                  launchExternalWebsite(
+                      "https://portais.univasf.edu.br/sibi/acessibilidade-e-inclusao-nas-bibliotecas");
+                }),
+              ),
               SizedBox(height: 20),
 
-              Text("Atividades remotas do SIBI UNIVASF na pandemia Covid-19 - Organização administrativa dos serviços prestados pelo SIBI, bem como as adequações realizadas para possibilitar a continuidade da prestação destes, de forma remota, durante a pandemia da Covid-19."),
+              Text(
+                  "Atividades remotas do SIBI UNIVASF na pandemia Covid-19 - Organização administrativa dos serviços prestados pelo SIBI, bem como as adequações realizadas para possibilitar a continuidade da prestação destes, de forma remota, durante a pandemia da Covid-19.",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
               TextButton.icon(
-                icon:Container(child: Image.asset('imagem/icones/pdf.png',width: 20,color: Colors.red[700], ),),
-                label: Text('Atividades remotas do SIBI UNIVASF na pandemia Covid-19'),
+                icon: Container(
+                  child: Image.asset(
+                    'imagem/icones/pdf.png',
+                    width: 20,
+                    color: Colors.red[700],
+                  ),
+                ),
+                label: Text(
+                    'Atividades remotas do SIBI UNIVASF na pandemia Covid-19',
+                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.blue[400]),
+                    ),
                 onPressed: () => setState(() {
-                  launchExternalWebsite("https://portais.univasf.edu.br/sibi/atividades-remotas-do-sibi-univasf-na-pandemia-covid-19");
-
-                }
-                ),),
-              SizedBox(height: 20),
-              
-              Text("Protocolo de segurança para as Bibliotecas da UNIVASF (COVID-19) - Adoção de medidas de prevenção/higienização e restrição quanto ao funcionamento total da biblioteca e sua utilização por parte dos usuários, afim de garantir a segurança dos profissionais da Univasf e da comunidade interna e externa que utilizam os serviços das bibliotecas."),
-              TextButton.icon(
-                icon:Container(child: Image.asset('imagem/icones/pdf.png',width: 20,color: Colors.red[700], ),),
-                label: Text('Protocolo de segurança para as Bibliotecas da UNIVASF (COVID-19)'),
-                onPressed: () => setState(() {
-                  launchExternalWebsite("https://portais.univasf.edu.br/sibi/protocolo-de-seguranca-para-as-bibliotecas-da-univasf_covid-19");
-
-                }
-                ),),
-              SizedBox(height: 20),
-
-              Text("Instruções para a Biblioteca Campus Petrolina (SEDE) - Utilização das salas de cabines individuais e da sala de estudo em grupo."),
-              TextButton.icon(
-                icon:Container(child: Image.asset('imagem/icones/pdf.png',width: 20,color: Colors.red[700], ),),
-                label: Text('Instruções para a Biblioteca Campus Petrolina (SEDE)'),
-                onPressed: () => setState(() {
-                  launchExternalWebsite("https://portais.univasf.edu.br/sibi/normas-especificas-de-utilizacao-das-salas-de-cabines-individuais-e-sala-de-estudo-da-biblioteca-central");
-
-                }
-                ),),
+                  launchExternalWebsite(
+                      "https://portais.univasf.edu.br/sibi/atividades-remotas-do-sibi-univasf-na-pandemia-covid-19");
+                }),
+              ),
               SizedBox(height: 20),
 
+              Text(
+                  "Protocolo de segurança para as Bibliotecas da UNIVASF (COVID-19) - Adoção de medidas de prevenção/higienização e restrição quanto ao funcionamento total da biblioteca e sua utilização por parte dos usuários, afim de garantir a segurança dos profissionais da Univasf e da comunidade interna e externa que utilizam os serviços das bibliotecas.",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
+              TextButton.icon(
+                icon: Container(
+                  child: Image.asset(
+                    'imagem/icones/pdf.png',
+                    width: 20,
+                    color: Colors.red[700],
+                  ),
+                ),
+                label: Text(
+                    'Protocolo de segurança para as Bibliotecas da UNIVASF (COVID-19)',
+                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.blue[400]),
+                    ),
+                onPressed: () => setState(() {
+                  launchExternalWebsite(
+                      "https://portais.univasf.edu.br/sibi/protocolo-de-seguranca-para-as-bibliotecas-da-univasf_covid-19");
+                }),
+              ),
+              SizedBox(height: 20),
 
+              Text(
+                  "Instruções para a Biblioteca Campus Petrolina (SEDE) - Utilização das salas de cabines individuais e da sala de estudo em grupo.",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
+              TextButton.icon(
+                icon: Container(
+                  child: Image.asset(
+                    'imagem/icones/pdf.png',
+                    width: 20,
+                    color: Colors.red[700],
+                  ),
+                ),
+                label: Text(
+                    'Instruções para a Biblioteca Campus Petrolina (SEDE)',
+                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.blue[400]),
+                    ),
+                onPressed: () => setState(() {
+                  launchExternalWebsite(
+                      "https://portais.univasf.edu.br/sibi/normas-especificas-de-utilizacao-das-salas-de-cabines-individuais-e-sala-de-estudo-da-biblioteca-central");
+                }),
+              ),
+              SizedBox(height: 20),
             ],
           ),
         ),
-      ) ,
+      ),
     );
   }
 }

@@ -17,11 +17,84 @@ class _telaespacopluralState extends State<telaespacoplural> {
         padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
           child :Column(
             children: [
-              Text(' Biblioteca Espaço Plural',textAlign: TextAlign.center,style: TextStyle(color: Colors.amber, fontSize: 30,)),
-              Container(child: Image.asset('imagem/espacoplural.jpeg'),),
-              Text('\nEndereço: Rod. BA-210, Km 4, S/n - Malhada da Areia, Juazeiro - BA\n'
-                  '\nAtendente: Henrique Pereira de Aquino\n'
-                  '\n E-mail: biblioteca.plural@univasf.edu.br\n')
+              Text(
+              'Biblioteca Espaço Plural\n',
+              textAlign: TextAlign.center,
+              style: 
+                TextStyle(
+                  // color: Colors.amber,
+                  color: Color.fromARGB(255, 253, 152, 2),
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                )
+            ),
+            
+            Container(
+              child: 
+                Image.asset(
+                  'imagem/espacoplural.jpeg'
+                ),
+            ),
+            
+            Text(
+              '\nAtendente',
+              textAlign: TextAlign.center,
+              style: 
+                TextStyle(
+                  fontSize: 21,
+                  fontWeight: FontWeight.bold,
+                )
+            ),
+            Text(
+              'Henrique Pereira de Aquino',
+              textAlign: TextAlign.center,
+              textDirection: TextDirection.ltr,
+              style: 
+                TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500
+                )
+            ),
+
+            Text(
+              '\nEndereço',
+              textAlign: TextAlign.center,
+              textDirection: TextDirection.ltr,
+              style: 
+                TextStyle(
+                  fontSize: 21,
+                  fontWeight: FontWeight.bold,
+                )
+            ),    
+            Text(
+              'Rod. BA-210, Km 4, S/n - Malhada da Areia, Juazeiro - BA',
+              textAlign: TextAlign.center,
+              style: 
+                TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500
+                )
+            ),
+            
+            Text(
+              '\nE-mail',
+              textAlign: TextAlign.center,
+              textDirection: TextDirection.ltr,
+              style: 
+                TextStyle(
+                  fontSize: 21,
+                  fontWeight: FontWeight.bold,
+                )
+            ),     
+            Text(
+              'biblioteca.plural@univasf.edu.br',
+              textAlign: TextAlign.center,
+              style: 
+                TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500
+                )
+            ),
             ],
           ),
       ),
