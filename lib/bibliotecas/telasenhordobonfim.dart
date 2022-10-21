@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sibi/menulateral.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class telasenhordobonfim extends StatefulWidget {
   const telasenhordobonfim({Key? key}) : super(key: key);
@@ -9,6 +10,15 @@ class telasenhordobonfim extends StatefulWidget {
 }
 
 class _telasenhordobonfimState extends State<telasenhordobonfim> {
+  void launchExternalWebsite(String url) async {
+    var urlUri = Uri.parse(url);
+    if (await canLaunchUrl(urlUri)) {
+      await launchUrl(urlUri, mode: LaunchMode.externalApplication);
+    } else {
+      throw 'could not lanch $urlUri';
+
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +28,7 @@ class _telasenhordobonfimState extends State<telasenhordobonfim> {
         child:  Column(
           children: [
             Text(
-              'Biblioteca Campus Juazeiro\n',
+              'Biblioteca Campus Senhor do Bonfim\n',
               textAlign: TextAlign.center,
               style: 
                 TextStyle(
@@ -34,26 +44,6 @@ class _telasenhordobonfimState extends State<telasenhordobonfim> {
                 Image.asset(
                   'imagem/campussenhordobonfim.png'
                 ),
-            ),
-            
-            Text(
-              '\nResponsável',
-              textAlign: TextAlign.center,
-              style: 
-                TextStyle(
-                  fontSize: 21,
-                  fontWeight: FontWeight.bold,
-                )
-            ),
-            Text(
-              'Fábio Silva Santiago (Bibliotecário)',
-              textAlign: TextAlign.center,
-              textDirection: TextDirection.ltr,
-              style: 
-                TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500
-                )
             ),
 
             Text(
@@ -85,15 +75,21 @@ class _telasenhordobonfimState extends State<telasenhordobonfim> {
                   fontSize: 21,
                   fontWeight: FontWeight.bold,
                 )
-            ),   
-            Text(
-              '(74)3221-4811',
-              textAlign: TextAlign.center,
-              style: 
-                TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500
-                )
+            ),
+            TextButton.icon(
+              icon: Container(
+                child:  Icon(Icons.call_outlined, size: 25.0,color: Colors.blue[400],),
+              ),
+              label: Text(
+                '(74)3221-4811',
+                style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.blue[400]),
+              ),
+              onPressed: () => setState(() {
+                launchExternalWebsite("tel:07432214811");
+              }),
             ),
 
             Text(
@@ -105,57 +101,24 @@ class _telasenhordobonfimState extends State<telasenhordobonfim> {
                   fontSize: 21,
                   fontWeight: FontWeight.bold,
                 )
-            ),     
-            Text(
-              'biblioteca.sbf@univasf.edu.br',
-              textAlign: TextAlign.center,
-              style: 
-                TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500
-                )
             ),
-            Text(
-              '\nAuxiliar de Biblioteca',
-              textAlign: TextAlign.center,
-              textDirection: TextDirection.ltr,
-              style: 
-                TextStyle(
-                  fontSize: 21,
-                  fontWeight: FontWeight.bold,
-                )
-            ),     
-            Text(
-              'Sirleide Santana',
-              textAlign: TextAlign.center,
-              style: 
-                TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500
-                )
+            TextButton.icon(
+              icon: Container(
+                child:  Icon(Icons.email_outlined, size: 25.0,color:  Color.fromARGB(255, 253, 152, 2)),
+              ),
+              label: Text(
+                'biblioteca.sbf@univasf.edu.br',
+                style: TextStyle(
+                    fontSize: 19,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.blue[400]),
+              ),
+              onPressed: () => setState(() {
+                launchExternalWebsite("mailto:biblioteca.sbf@univasf.edu.br");
+              }),
             ),
 
-            Text(
-              '\nAtendentes',
-              textAlign: TextAlign.center,
-              textDirection: TextDirection.ltr,
-              style: 
-                TextStyle(
-                  fontSize: 21,
-                  fontWeight: FontWeight.bold,
-                )
-            ),
 
-            Text(
-              'Cássia Vieira Aprígio\n'
-              'Elzeni de Souza Nascimento',
-              textAlign: TextAlign.center,
-              style: 
-                TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500
-                )
-            ),
           ],
         ),
       ),

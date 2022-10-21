@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 class serradacapivara extends StatefulWidget {
   const serradacapivara({Key? key}) : super(key: key);
 
@@ -7,6 +9,15 @@ class serradacapivara extends StatefulWidget {
 }
 
 class _serradacapivaraState extends State<serradacapivara> {
+  void launchExternalWebsite(String url) async {
+    var urlUri = Uri.parse(url);
+    if (await canLaunchUrl(urlUri)) {
+      await launchUrl(urlUri, mode: LaunchMode.externalApplication);
+    } else {
+      throw 'could not lanch $urlUri';
+
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +27,7 @@ class _serradacapivaraState extends State<serradacapivara> {
           child: Column(
         children: [
           Text(
-              'Biblioteca Campus Serra da Capivara\n',
+              'Biblioteca Campus São Raminundo Nonato\n',
               textAlign: TextAlign.center,
               style: 
                 TextStyle(
@@ -34,25 +45,6 @@ class _serradacapivaraState extends State<serradacapivara> {
                 ),
             ),
             
-            Text(
-              '\nResponsável',
-              textAlign: TextAlign.center,
-              style: 
-                TextStyle(
-                  fontSize: 21,
-                  fontWeight: FontWeight.bold,
-                )
-            ),
-            Text(
-              'Kênia Leadra Ferreira Alves (Bibliotecária)',
-              textAlign: TextAlign.center,
-              textDirection: TextDirection.ltr,
-              style: 
-                TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500
-                )
-            ),
 
             Text(
               '\nEndereço',
@@ -83,16 +75,23 @@ class _serradacapivaraState extends State<serradacapivara> {
                   fontSize: 21,
                   fontWeight: FontWeight.bold,
                 )
-            ),   
-            Text(
-              '(89)3582-9760',
-              textAlign: TextAlign.center,
-              style: 
-                TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500
-                )
             ),
+          TextButton.icon(
+            icon: Container(
+              child:  Icon(Icons.call_outlined, size: 30.0,color: Colors.blue[400],),
+            ),
+            label: Text(
+              '(89)3582-9760',
+              style: TextStyle(
+                  fontSize: 17,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.blue[400]),
+            ),
+            onPressed: () => setState(() {
+              launchExternalWebsite("tel:08935829760");
+            }),
+          ),
+
 
             Text(
               '\nE-mail',
@@ -103,76 +102,23 @@ class _serradacapivaraState extends State<serradacapivara> {
                   fontSize: 21,
                   fontWeight: FontWeight.bold,
                 )
-            ),     
-            Text(
+            ),
+          TextButton.icon(
+            icon: Container(
+              child:  Icon(Icons.email_outlined, size: 25.0,color:  Color.fromARGB(255, 253, 152, 2)),
+            ),
+            label: Text(
               'biblioteca.srn@univasf.edu.br',
-              textAlign: TextAlign.center,
-              style: 
-                TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500
-                )
+              style: TextStyle(
+                  fontSize: 19,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.blue[400]),
             ),
+            onPressed: () => setState(() {
+              launchExternalWebsite("mailto:biblioteca.srn@univasf.edu.br");
+            }),
+          ),
 
-            Text(
-              '\nAssistente em Administração',
-              textAlign: TextAlign.center,
-              textDirection: TextDirection.ltr,
-              style: 
-                TextStyle(
-                  fontSize: 21,
-                  fontWeight: FontWeight.bold,
-                )
-            ),     
-            Text(
-              'Vilma dos Santos Castro',
-              textAlign: TextAlign.center,
-              style: 
-                TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500
-                )
-            ),
-
-            Text(
-              '\nAuxiliar de Biblioteca',
-              textAlign: TextAlign.center,
-              textDirection: TextDirection.ltr,
-              style: 
-                TextStyle(
-                  fontSize: 21,
-                  fontWeight: FontWeight.bold,
-                )
-            ),     
-            Text(
-              'Thyanne Michelle Ferreira Alves',
-              textAlign: TextAlign.center,
-              style: 
-                TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500
-                )
-            ),
-
-            Text(
-              '\nAtendente',
-              textAlign: TextAlign.center,
-              textDirection: TextDirection.ltr,
-              style: 
-                TextStyle(
-                  fontSize: 21,
-                  fontWeight: FontWeight.bold,
-                )
-            ),     
-            Text(
-              'Eliene de Castro Soares',
-              textAlign: TextAlign.center,
-              style: 
-                TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500
-                )
-            ),
         ],
       )),
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sibi/menulateral.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 class telajuzeiro extends StatefulWidget {
   const telajuzeiro({Key? key}) : super(key: key);
 
@@ -8,6 +9,15 @@ class telajuzeiro extends StatefulWidget {
 }
 
 class _telajuzeiroState extends State<telajuzeiro> {
+  void launchExternalWebsite(String url) async {
+    var urlUri = Uri.parse(url);
+    if (await canLaunchUrl(urlUri)) {
+      await launchUrl(urlUri, mode: LaunchMode.externalApplication);
+    } else {
+      throw 'could not lanch $urlUri';
+
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,26 +43,6 @@ class _telajuzeiroState extends State<telajuzeiro> {
                 Image.asset(
                   'imagem/campusjuazeiro.png'
                 ),
-            ),
-            
-            Text(
-              '\nResponsável',
-              textAlign: TextAlign.center,
-              style: 
-                TextStyle(
-                  fontSize: 21,
-                  fontWeight: FontWeight.bold,
-                )
-            ),
-            Text(
-              'Renato Marques Alves (Bibliotecário - Coordenador da Biblioteca de Juazeiro)',
-              textAlign: TextAlign.center,
-              textDirection: TextDirection.ltr,
-              style: 
-                TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500
-                )
             ),
 
             Text(
@@ -84,15 +74,21 @@ class _telajuzeiroState extends State<telajuzeiro> {
                   fontSize: 21,
                   fontWeight: FontWeight.bold,
                 )
-            ),   
-            Text(
-              '(74)2102-7656',
-              textAlign: TextAlign.center,
-              style: 
-                TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500
-                )
+            ),
+            TextButton.icon(
+              icon: Container(
+                child:  Icon(Icons.call_outlined, size: 30.0,color: Colors.blue[400],),
+              ),
+              label: Text(
+                '(74)2102-7656',
+                style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.blue[400]),
+              ),
+              onPressed: () => setState(() {
+                launchExternalWebsite("tel:07421027656");
+              }),
             ),
 
             Text(
@@ -104,99 +100,21 @@ class _telajuzeiroState extends State<telajuzeiro> {
                   fontSize: 21,
                   fontWeight: FontWeight.bold,
                 )
-            ),     
-            Text(
-              'biblioteca.juazeiro@univasf.edu.br',
-              textAlign: TextAlign.center,
-              style: 
-                TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500
-                )
             ),
-
-            Text(
-              '\nCoordenador de Compras de Acervo',
-              textAlign: TextAlign.center,
-              textDirection: TextDirection.ltr,
-              style: 
-                TextStyle(
-                  fontSize: 21,
-                  fontWeight: FontWeight.bold,
-                )
-            ),     
-            Text(
-              'Márcio Pedro Carvalho Pataro de Queiroz (Bibliotecário)',
-              textAlign: TextAlign.center,
-              style: 
-                TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500
-                )
-            ),
-
-            Text(
-              '\nAssistente de Apoio ao SIBI',
-              textAlign: TextAlign.center,
-              textDirection: TextDirection.ltr,
-              style: 
-                TextStyle(
-                  fontSize: 21,
-                  fontWeight: FontWeight.bold,
-                )
-            ),     
-            Text(
-              'Vanessa Lemos Duarte de Castro Gama\n'
-              'Edison de Castro\n'
-              'Josemir José de Pinho',
-              textAlign: TextAlign.center,
-              style: 
-                TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500
-                )
-            ),
-
-            Text(
-              '\nAtendentes',
-              textAlign: TextAlign.center,
-              textDirection: TextDirection.ltr,
-              style: 
-                TextStyle(
-                  fontSize: 21,
-                  fontWeight: FontWeight.bold,
-                )
-            ),     
-            Text(
-              'Joseneide Pereira dos S. Mota\n'
-              'Maria Eulinda P. Santana\n'
-              'Michelle Taiane de Jesus Fernandes\n',
-              textAlign: TextAlign.center,
-              style: 
-                TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500
-                )
-            ),
-
-            Text(
-              '\nBiblioteca do Hospital Universitário (HU)',
-              textAlign: TextAlign.center,
-              textDirection: TextDirection.ltr,
-              style: 
-                TextStyle(
-                  fontSize: 21,
-                  fontWeight: FontWeight.bold,
-                )
-            ),     
-            Text(
-              'Fabio Oliveira Lima (Bibliotecário)',
-              textAlign: TextAlign.center,
-              style: 
-                TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500
-                )
+            TextButton.icon(
+              icon: Container(
+                child:  Icon(Icons.email_outlined, size: 25.0,color:  Color.fromARGB(255, 253, 152, 2)),
+              ),
+              label: Text(
+                'biblioteca.juazeiro@univasf.edu.br',
+                style: TextStyle(
+                    fontSize: 19,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.blue[400]),
+              ),
+              onPressed: () => setState(() {
+                launchExternalWebsite("mailto:biblioteca.juazeiro@univasf.edu.br");
+              }),
             ),
           ],
         ),

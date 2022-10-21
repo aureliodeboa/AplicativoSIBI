@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 class teladecienciasagrarias extends StatefulWidget {
   const teladecienciasagrarias({Key? key}) : super(key: key);
 
@@ -7,6 +9,15 @@ class teladecienciasagrarias extends StatefulWidget {
 }
 
 class _teladecienciasagrariasState extends State<teladecienciasagrarias> {
+  void launchExternalWebsite(String url) async {
+    var urlUri = Uri.parse(url);
+    if (await canLaunchUrl(urlUri)) {
+      await launchUrl(urlUri, mode: LaunchMode.externalApplication);
+    } else {
+      throw 'could not lanch $urlUri';
+
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -32,26 +43,6 @@ class _teladecienciasagrariasState extends State<teladecienciasagrarias> {
                 Image.asset(
                   'imagem/campuscienciasagrarias.png'
                 ),
-            ),
-            
-            Text(
-              '\nResponsável',
-              textAlign: TextAlign.center,
-              style: 
-                TextStyle(
-                  fontSize: 21,
-                  fontWeight: FontWeight.bold,
-                )
-            ),
-            Text(
-              'Andressa Lais Machado de Matos (Bibliotecária)',
-              textAlign: TextAlign.center,
-              textDirection: TextDirection.ltr,
-              style: 
-                TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500
-                )
             ),
 
             Text(
@@ -83,17 +74,22 @@ class _teladecienciasagrariasState extends State<teladecienciasagrarias> {
                   fontSize: 21,
                   fontWeight: FontWeight.bold,
                 )
-            ),   
-            Text(
-              ' (87)2101-4813',
-              textAlign: TextAlign.center,
-              style: 
-                TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500
-                )
             ),
-
+          TextButton.icon(
+            icon: Container(
+              child:  Icon(Icons.call_outlined, size: 25.0,color: Colors.blue[400]),
+            ),
+            label: Text(
+              '(87) 2101-4813',
+              style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.blue[400]),
+            ),
+            onPressed: () => setState(() {
+              launchExternalWebsite("tel:08721014813");
+            }),
+          ),
             Text(
               '\nE-mail',
               textAlign: TextAlign.center,
@@ -103,36 +99,25 @@ class _teladecienciasagrariasState extends State<teladecienciasagrarias> {
                   fontSize: 21,
                   fontWeight: FontWeight.bold,
                 )
-            ),     
-            Text(
+            ),
+
+          TextButton.icon(
+            icon: Container(
+              child:  Icon(Icons.email_outlined, size: 25.0,color:  Color.fromARGB(255, 253, 152, 2)),
+            ),
+            label: Text(
               'biblioteca.fazenda@univasf.edu.br',
-              textAlign: TextAlign.center,
-              style: 
-                TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500
-                )
+              style: TextStyle(
+                  fontSize: 19,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.blue[400]),
             ),
-            Text(
-              '\nAtendentes',
-              textAlign: TextAlign.center,
-              textDirection: TextDirection.ltr,
-              style: 
-                TextStyle(
-                  fontSize: 21,
-                  fontWeight: FontWeight.bold,
-                )
-            ),     
-            Text(
-              'Rozangela Cristina Nogueira\n'
-              'Lucineide Nunes',
-              textAlign: TextAlign.center,
-              style: 
-                TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500
-                )
-            ),
+            onPressed: () => setState(() {
+              launchExternalWebsite("mailto:biblioteca.fazenda@univasf.edu.br");
+            }),
+          ),
+
+
           ],
       ),),
 
