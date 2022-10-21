@@ -22,29 +22,24 @@ class _telaguiausuarioState extends State<telaguiausuario> {
             padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
             child: Column(
               children: [
-                Text(
-                  textAlign: TextAlign.start,
-                  "O SIBI é o responsável pela coordenação e administração das bibliotecas e pelos recursos informacionais que servem "
-                  "de suporte às atividades de ensino, pesquisa e extensão, conforme as políticas, planos e programas da Univasf.\n",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
-                ),
                 Text('Empréstimo de Materiais',
                     style: TextStyle(
-                      color: Color.fromARGB(255, 253, 152, 2),
-                      fontSize: 25,
-                      fontWeight: FontWeight.w700
-                    )),
+                        color: Color.fromARGB(255, 253, 152, 2),
+                        fontSize: 25,
+                        fontWeight: FontWeight.w700)),
                 Text(
                     "O prazo de empréstimo domiciliar varia de acordo com a categoria do usuário\n ",
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
+                    style:
+                        TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
                 Image.asset('imagem/prazos.png', width: 350, height: 300),
                 Text(
                     "\n As obras de consulta local poderão ser retiradas para empréstimo especial por um período de 02 (duas) horas.\n ",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
+                    style:
+                        TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
                 Text(
                     "\n OBS: No caso da Biblioteca do Campus Ciências Agrárias, esse prazo se estende para 04 (quatro) horas.\n ",
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
-
+                    style:
+                        TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
                 Text(
                     "\n As obras de consulta local poderão ser retiradas para empréstimo especial na véspera de feriado ou fim de semana,"
                     " quatro horas antes do encerramento do expediente, com devolução para o primeiro dia útil,"
@@ -53,49 +48,46 @@ class _telaguiausuarioState extends State<telaguiausuario> {
                     "de cada título, identificados também através de fita vermelha,"
                     " fixada na lombada da obra. Não será realizado empréstimo de dois exemplares"
                     " da mesma obra para o mesmo usuário.\n ",
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
+                    style:
+                        TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
                 Text(' Renovação ',
                     style: TextStyle(
-                      color: Color.fromARGB(255, 253, 152, 2),
-                      fontSize: 25,
-                      fontWeight: FontWeight.w700
-                    )),
+                        color: Color.fromARGB(255, 253, 152, 2),
+                        fontSize: 25,
+                        fontWeight: FontWeight.w700)),
                 Text(
                     "\n O material poderá ser renovado por até 02 (duas) vezes no balcão e"
                     " atendimento ou via internet  pelo Pergamum, que você pode consultar neste aplicativo  indo no menu e clicando em renovação."
                     " Após esse número de renovações, o material deverá ser devolvido à "
                     "biblioteca e solicitado novo empréstimo. \n ",
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
-
+                    style:
+                        TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
                 Text('Devolução de materias',
                     style: TextStyle(
-                      color: Color.fromARGB(255, 253, 152, 2),
-                      fontSize: 25,
-                      fontWeight: FontWeight.w700
-                    )),
+                        color: Color.fromARGB(255, 253, 152, 2),
+                        fontSize: 25,
+                        fontWeight: FontWeight.w700)),
                 Text(
                     "\n A devolução do material deverá ser feita na data prevista, podendo ser efetuada por "
                     "qualquer pessoa. Caso o usuário não respeite o prazo de devolução do material sob sua"
                     " responsabilidade ficará suspenso do direito de QUALQUER empréstimo \n ",
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
-
+                    style:
+                        TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
                 Text('Reserva',
                     style: TextStyle(
-                      color: Color.fromARGB(255, 253, 152, 2),
-                      fontSize: 25,
-                      fontWeight: FontWeight.w700
-                    )),
+                        color: Color.fromARGB(255, 253, 152, 2),
+                        fontSize: 25,
+                        fontWeight: FontWeight.w700)),
                 Text(
                     "\n A reserva de um material só é possível se todos os exemplares com exceção do de consulta estiverem emprestados.\n \n  As reservas de material deverão ser feitas pelo Pergamun, "
                     "nesse aplicativo também é possivel fazer a reserva clicando em “ Reserva e Renovação de Livros ”, ou pelo site www.biblioteca.univasf.edu.br .\n \n A reserva é nominal, obedecendo à ordem cronológica de solicitações. A obra em reserva estará disponível pelo prazo de 24h (vinte e quatro horas). Após este período a obra será liberada automaticamente, para o usuário seguinte. \n ",
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
-
+                    style:
+                        TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
                 Text('Responsabilidades dos usuários ',
                     style: TextStyle(
-                      color: Color.fromARGB(255, 253, 152, 2),
-                      fontSize: 25,
-                      fontWeight: FontWeight.w700
-                    )),
+                        color: Color.fromARGB(255, 253, 152, 2),
+                        fontSize: 25,
+                        fontWeight: FontWeight.w700)),
                 Text(
                     "\n• Responder pela guarda, conservação e uso do material emprestado em seu nome\n"
                     " \n• Conhecer as normas da biblioteca\n"
@@ -113,8 +105,8 @@ class _telaguiausuarioState extends State<telaguiausuario> {
                     "\n• Não fumar nas dependências da biblioteca\n"
                     "\n• Não entrar na biblioteca usando jaleco\n"
                     "\n• Não adentrar na biblioteca portando equipamentos sonoros que prejudiquem a Pesquisa/estudo de outros usuários\n",
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
-
+                    style:
+                        TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
               ],
             ),
           ),
