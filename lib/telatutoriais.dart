@@ -23,10 +23,9 @@ class _telatutoriaisState extends State<telatutoriais> {
                 Text(
                     'Emissão da declaração de isenção de débito "nada consta"\n ',
                     style: TextStyle(
-                      color: Color.fromARGB(255, 253, 152, 2),
-                      fontSize: 25,
-                      fontWeight: FontWeight.w700
-                    )),
+                        color: Color.fromARGB(255, 253, 152, 2),
+                        fontSize: 25,
+                        fontWeight: FontWeight.w700)),
                 //Text('O video a seguir mostra como conseguir o "nada consta" :',style: TextStyle(color: Colors.black, fontSize: 18,)),
 
                 YoutubePlayer(
@@ -47,10 +46,9 @@ class _telatutoriaisState extends State<telatutoriais> {
                 Text(
                     'Como fazer a renovação de um livro da biblioteca on-line? \n',
                     style: TextStyle(
-                      color: Color.fromARGB(255, 253, 152, 2),
-                      fontSize: 25,
-                      fontWeight: FontWeight.w700
-                    )),
+                        color: Color.fromARGB(255, 253, 152, 2),
+                        fontSize: 25,
+                        fontWeight: FontWeight.w700)),
 
                 YoutubePlayer(
                   controller: YoutubePlayerController(
@@ -69,10 +67,9 @@ class _telatutoriaisState extends State<telatutoriais> {
 
                 Text('Como ter acesso as normas ABNT pelo catalgo Pergamun? \n',
                     style: TextStyle(
-                      color: Color.fromARGB(255, 253, 152, 2),
-                      fontSize: 25,
-                      fontWeight: FontWeight.w700
-                    )),
+                        color: Color.fromARGB(255, 253, 152, 2),
+                        fontSize: 25,
+                        fontWeight: FontWeight.w700)),
                 //Text('Siga as instruções do video asseguir:',style: TextStyle(color: Colors.black, fontSize: 18,)),
                 YoutubePlayer(
                   controller: YoutubePlayerController(
@@ -90,12 +87,55 @@ class _telatutoriaisState extends State<telatutoriais> {
                   height: 30,
                 ),
 
+                Text('Acesso Externo do Portal de Periódicos da Capes: \n',
+                    style: TextStyle(
+                        color: Color.fromARGB(255, 253, 152, 2),
+                        fontSize: 25,
+                        fontWeight: FontWeight.w700)),
+                // Text('Siga as instruções do video asseguir:',style: TextStyle(color: Colors.black, fontSize: 18,)),
+                YoutubePlayer(
+                  controller: YoutubePlayerController(
+                      initialVideoId: 'vxpxPFhxZAU',
+                      flags: YoutubePlayerFlags(
+                        autoPlay: false,
+                        mute: false,
+                        showLiveFullscreenButton: true,
+                        hideControls: false,
+                      )),
+                ),
+
+                SizedBox(
+                  width: 30,
+                  height: 30,
+                ),
+
+                Text('Depósito de TCC na biblioteca: \n',
+                    style: TextStyle(
+                        color: Color.fromARGB(255, 253, 152, 2),
+                        fontSize: 25,
+                        fontWeight: FontWeight.w700)),
+
+                YoutubePlayer(
+                  controller: YoutubePlayerController(
+                      initialVideoId: 'Db95Dtalh_I',
+                      flags: YoutubePlayerFlags(
+                        autoPlay: false,
+                        mute: false,
+                        showLiveFullscreenButton: true,
+                        hideControls: false,
+                      )),
+                ),
+
+                SizedBox(
+                  width: 30,
+                  height: 30,
+                ),
+
                 Text('Como fazer Consultas no Pergamum? \n',
                     style: TextStyle(
-                      color: Color.fromARGB(255, 253, 152, 2),
-                      fontSize: 25,
-                      fontWeight: FontWeight.w700
-                    )),
+                        color: Color.fromARGB(255, 253, 152, 2),
+                        fontSize: 25,
+                        fontWeight: FontWeight.w700)),
                 // Text('Siga as instruções do video asseguir:',style: TextStyle(color: Colors.black, fontSize: 18,)),
                 YoutubePlayer(
                   controller: YoutubePlayerController(

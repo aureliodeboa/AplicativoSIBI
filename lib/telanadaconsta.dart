@@ -32,8 +32,7 @@ class _telanadaconstaState extends State<telanadaconsta> {
           child: Column(
             children: [
               Text(
-                  "\n Para que o discente conclua a graduação  na UNIVASF e receba o tão esperado diploma, é necessário emitir a declaração de isenção de débito “ nada consta “ "
-                  "a seguir é demonstrado o passo a passo para emitir: \n ",
+                  "\n Para emissão de Declaração de Isenção de Débito (nada consta): \n ",
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
               Text(
                   "\n• Primeiro deve-se acessar o Sistema Pergamum, disponível no link abaixo ou pelo Portal SIBI",
@@ -75,15 +74,11 @@ class _telanadaconstaState extends State<telanadaconsta> {
                     color: Color.fromARGB(255, 253, 152, 2),
                   ),
                 ),
-                label: Text(
-                        ' Acesse o pergamum clicando aqui',
-                        style: 
-                          TextStyle(
-                            color: Color.fromARGB(255, 253, 152, 2),
-                            fontSize: 18,
-                          )
-                      ),
-                
+                label: Text(' Acesse o pergamum clicando aqui',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 253, 152, 2),
+                      fontSize: 18,
+                    )),
                 onPressed: () => setState(() {
                   launchExternalWebsite(
                       "https://biblioteca.univasf.edu.br/pergamum/biblioteca_s/php/login_usu.php?flag=index.php");

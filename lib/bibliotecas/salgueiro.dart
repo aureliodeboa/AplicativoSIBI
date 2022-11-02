@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
+
 class salgueiro extends StatefulWidget {
   const salgueiro({Key? key}) : super(key: key);
 
@@ -6,6 +9,16 @@ class salgueiro extends StatefulWidget {
   State<salgueiro> createState() => _salgueiroState();
 }
 class _salgueiroState extends State<salgueiro> {
+
+  void launchExternalWebsite(String url) async {
+    var urlUri = Uri.parse(url);
+    if (await canLaunchUrl(urlUri)) {
+      await launchUrl(urlUri, mode: LaunchMode.externalApplication);
+    } else {
+      throw 'could not lanch $urlUri';
+
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,26 +47,6 @@ class _salgueiroState extends State<salgueiro> {
                 Image.asset(
                   'imagem/salgueiro.png'
                 ),
-            ),
-            
-            Text(
-              '\nResponsável',
-              textAlign: TextAlign.center,
-              style: 
-                TextStyle(
-                  fontSize: 21,
-                  fontWeight: FontWeight.bold,
-                )
-            ),
-            Text(
-              'Ana Cleide Lúcio Pinheiro (Bibliotecária)',
-              textAlign: TextAlign.center,
-              textDirection: TextDirection.ltr,
-              style: 
-                TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500
-                )
             ),
 
             Text(
@@ -85,36 +78,25 @@ class _salgueiroState extends State<salgueiro> {
                   fontSize: 21,
                   fontWeight: FontWeight.bold,
                 )
-            ),     
-            Text(
+            ),
+          TextButton.icon(
+            icon: Container(
+              child:  Icon(Icons.email_outlined, size: 25.0,color:  Color.fromARGB(255, 253, 152, 2)),
+            ),
+            label: Text(
               'biblioteca.salgueiro@univasf.edu.br',
-              textAlign: TextAlign.center,
-              style: 
-                TextStyle(
+              style: TextStyle(
                   fontSize: 18,
-                  fontWeight: FontWeight.w500
-                )
+                  fontWeight: FontWeight.w500,
+                  color: Colors.blue[400]),
             ),
+            onPressed: () => setState(() {
+              launchExternalWebsite("mailto:biblioteca.salgueiro@univasf.edu.br");
+            }),
+          ),
 
-            Text(
-              '\nAtendente',
-              textAlign: TextAlign.center,
-              textDirection: TextDirection.ltr,
-              style: 
-                TextStyle(
-                  fontSize: 21,
-                  fontWeight: FontWeight.bold,
-                )
-            ),     
-            Text(
-              'Ayla Sampaio',
-              textAlign: TextAlign.center,
-              style: 
-                TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500
-                )
-            ),
+
+
         ],
       ),)
 

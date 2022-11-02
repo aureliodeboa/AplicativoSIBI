@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
+
 class telaespacoplural extends StatefulWidget {
   const telaespacoplural({Key? key}) : super(key: key);
 
@@ -7,8 +10,18 @@ class telaespacoplural extends StatefulWidget {
 }
 
 class _telaespacopluralState extends State<telaespacoplural> {
+  void launchExternalWebsite(String url) async {
+    var urlUri = Uri.parse(url);
+    if (await canLaunchUrl(urlUri)) {
+      await launchUrl(urlUri, mode: LaunchMode.externalApplication);
+    } else {
+      throw 'could not lanch $urlUri';
+
+    }
+  }
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue[400],
@@ -34,26 +47,6 @@ class _telaespacopluralState extends State<telaespacoplural> {
                 Image.asset(
                   'imagem/espacoplural.jpeg'
                 ),
-            ),
-            
-            Text(
-              '\nAtendente',
-              textAlign: TextAlign.center,
-              style: 
-                TextStyle(
-                  fontSize: 21,
-                  fontWeight: FontWeight.bold,
-                )
-            ),
-            Text(
-              'Henrique Pereira de Aquino',
-              textAlign: TextAlign.center,
-              textDirection: TextDirection.ltr,
-              style: 
-                TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500
-                )
             ),
 
             Text(
@@ -85,16 +78,23 @@ class _telaespacopluralState extends State<telaespacoplural> {
                   fontSize: 21,
                   fontWeight: FontWeight.bold,
                 )
-            ),     
-            Text(
-              'biblioteca.plural@univasf.edu.br',
-              textAlign: TextAlign.center,
-              style: 
-                TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500
-                )
             ),
+              TextButton.icon(
+                icon: Container(
+                  child:  Icon(Icons.email_outlined, size: 25.0,color:  Color.fromARGB(255, 253, 152, 2)),
+                ),
+                label: Text(
+                  'biblioteca.plural@univasf.edu.br',
+                  style: TextStyle(
+                      fontSize: 19,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.blue[400]),
+                ),
+                onPressed: () => setState(() {
+                  launchExternalWebsite("mailto:biblioteca.plural@univasf.edu.br");
+                }),
+              ),
+
             ],
           ),
       ),
