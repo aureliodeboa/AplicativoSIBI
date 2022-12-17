@@ -1,6 +1,5 @@
-# sibi
-Aplicativo do sistema integrado de Bibliotecas da univasf
-  Esse projeto é aberto e portanto livre para melhorias no codigo, foi feito durante uma displina de Engenharia de Software III, ministrada pelo professor Ricardo Argenton Ramos.
+# SIBI 
+Aplicativo do sistema integrado de Bibliotecas da Univasf. Esse projeto é aberto e portanto livre para melhorias no codigo, foi feito durante uma disciplina de Engenharia de Software III, ministrada pelo professor Ricardo Argenton Ramos.
 ## Getting Started
 
 This project is a starting point for a Flutter application.
