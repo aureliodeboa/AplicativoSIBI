@@ -25,7 +25,7 @@ Este projeto é aberto a atualizações e sugestões. Encorajamos os alunos da U
 
 ## Como Contribuir
 
-1. Faça um fork deste repositório.
+1. Faça um clone deste repositório.
 
 2. Crie uma branch para a sua nova feature: `git checkout -b minha-nova-feature`.
 
