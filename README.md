@@ -41,7 +41,7 @@ Este projeto está licenciado sob a licença MIT. Consulte o arquivo [LICENSE](h
 
 ## Download
 
-O aplicativo SIBI está disponível para download, apenas para dispositivos android, em [link-para-baixar-o-aplicativo](https://drive.google.com/file/d/1upuaU0F3-6tvp55VdJgzDGPh9aNW4ysT/view).
+O aplicativo SIBI está disponível para download, apenas para dispositivos android, em [Clique aqui para baixar o aplicativo](https://drive.google.com/file/d/1upuaU0F3-6tvp55VdJgzDGPh9aNW4ysT/view).
 
 
 
