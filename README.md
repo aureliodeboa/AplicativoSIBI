@@ -17,7 +17,8 @@ A inciativa de criar o aplicativo partiu dos estudantes Aurélio José Ribeiro d
 Com o lançamento do aplicativo, o Sibi espera uma maior aproximação entre a comunidade acadêmica e o Sistema. “Esperamos tornar o Sibi ainda mais acessível, fornecendo aos usuários informação segura, praticidade de acesso, alcance remoto e maior proximidade do usuário com as bibliotecas”, afirma Alencar.
 
 É possível baixar o aplicativo a partir de link disponível na bio do @sibiunivasf , no portal do Sibi e na tela de consulta do Catálogo Pergamum ou no final desse repositorio.
-
+## RTV CAATINGA UNIVASF
+https://youtu.be/p7WKsB0vFxk
 
 ## Contribuição
 
