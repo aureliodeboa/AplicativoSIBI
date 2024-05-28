@@ -18,7 +18,8 @@ Com o lançamento do aplicativo, o Sibi espera uma maior aproximação entre a c
 
 É possível baixar o aplicativo a partir de link disponível na bio do @sibiunivasf , no portal do Sibi e na tela de consulta do Catálogo Pergamum ou no final desse repositorio.
 ## RTV CAATINGA UNIVASF
-https://youtu.be/p7WKsB0vFxk
+Nossa entrevista com RTV Caatinga Univasf
+[![Assista ao vídeo](https://img.youtube.com/vi/p7WKsB0vFxk/0.jpg)](https://youtu.be/p7WKsB0vFxk)
 
 ## Contribuição
 
